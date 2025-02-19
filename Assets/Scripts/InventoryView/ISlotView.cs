@@ -1,8 +1,7 @@
 using ViewUtility;
-using Inventory;
 using UnityEngine.Events;
 
-namespace InventoryView
+namespace Inventory.UI
 {
     public class ISlotView : DataView<ISlot>
     {
