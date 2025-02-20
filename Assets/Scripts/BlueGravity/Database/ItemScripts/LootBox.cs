@@ -7,7 +7,7 @@ namespace BlueGravity.ItemScripts
     // ReSharper disable once UnusedType.Global
     public class LootBox : IUsabeItem
     {
-        [SerializeField] private List<Item> contents;
+        [SerializeField] private List<ItemSO> contents;
 
         public bool ConsumeOnUse => true;
 

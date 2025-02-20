@@ -6,7 +6,7 @@ using Utility;
 namespace BlueGravity
 {
     [CreateAssetMenu(menuName = "Game/Item")]
-    public class Item : ScriptableObject
+    public class ItemSO : ScriptableObject
     {
         [SerializeField] private string displayName;
         [SerializeField] private Sprite icon;
