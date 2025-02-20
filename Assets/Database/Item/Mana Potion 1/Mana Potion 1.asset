@@ -12,13 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d8c97219964cf59f2fe6169f2f24b5, type: 3}
   m_Name: Mana Potion 1
   m_EditorClassIdentifier: 
-  displayName: Health Potion
+  displayName: Minor Mana Potion
   icon: {fileID: 21300000, guid: b7f77607c82ea4142a2070c0e37e1756, type: 3}
-  description: Health Potion description
+  description: restore 10 mp
   price: 8
   maxStack: 10
   scripts:
-    list: []
+    list:
+    - rid: 5184424273557061638
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 5184424273557061638
+      type: {class: Potion, ns: BlueGravity.ItemScripts, asm: BlueGravity}
+      data:
+        healthAmount: 0
+        manaAmount: 10

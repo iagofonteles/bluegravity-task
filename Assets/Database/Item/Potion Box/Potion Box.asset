@@ -16,7 +16,7 @@ MonoBehaviour:
   icon: {fileID: 0}
   description: May contain a variety of potions
   price: 0
-  maxStack: 0
+  maxStack: 99
   scripts:
     list:
     - rid: 5184424273557061636
@@ -26,6 +26,7 @@ MonoBehaviour:
     - rid: 5184424273557061636
       type: {class: LootBox, ns: BlueGravity.ItemScripts, asm: BlueGravity}
       data:
-        consume: 1
         contents:
+        - {fileID: 11400000, guid: 594dd192011725c459c9a2fe8b32e7e0, type: 2}
+        - {fileID: 11400000, guid: 6d989b032e181604597026a29d5b8cb6, type: 2}
         - {fileID: 11400000}
