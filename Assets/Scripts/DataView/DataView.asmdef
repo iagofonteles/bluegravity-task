@@ -2,6 +2,7 @@
     "name": "DataView",
     "rootNamespace": "",
     "references": [
+        "Utility",
         "Unity.TextMeshPro"
     ],
     "includePlatforms": [],

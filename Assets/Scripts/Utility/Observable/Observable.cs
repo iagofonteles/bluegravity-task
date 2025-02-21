@@ -1,24 +1,29 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Events;
 
 namespace Utility
 {
     public delegate void ValueChangedHandler<in T>(T newValue, T oldValue);
 
-    public class IObservable<T>
+    public interface IObservable
     {
-        event ValueChangedHandler<T> OnValueChanged;
+        object Value { get; }
+        event Action<object>  OnChanged;
     }
 
     [Serializable]
-    public class Observable<T> : IObservable<T>
+    public class Observable<T> : IObservable
     {
-        private T _value;
+        [SerializeField] private T _value;
 
         public Observable() { }
 
         public Observable(T value) => _value = value;
 
+        object IObservable.Value => _value;
+        
         public T Value
         {
             get => _value;
@@ -29,10 +34,12 @@ namespace Utility
 
                 var old = _value;
                 _value = value;
+                OnChanged?.Invoke(value);
                 OnValueChanged?.Invoke(value, old);
             }
         }
 
+        public event Action<object> OnChanged;
         public event ValueChangedHandler<T> OnValueChanged;
     }
 }
