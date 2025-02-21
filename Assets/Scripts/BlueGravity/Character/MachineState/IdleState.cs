@@ -1,10 +1,11 @@
 using StateMachines;
-using UnityEngine;
 
 namespace BlueGravity.CharacterStates
 {
     public class IdleState : CharacterState
     {
+        public float moveSpeed = 5;
+
         public override void OnEnter(object subject, StateChangeArgs prev)
         {
             base.OnEnter(subject, prev);
@@ -20,10 +21,9 @@ namespace BlueGravity.CharacterStates
 
         public override void OnUpdate(object subject)
         {
-            var speed = Character.Stats.MoveSpeed.Value;
+            var speed = Character.Player.Stats.MoveSpeed.Value;
             var dir = Character.Input.Direction;
-            if (dir.sqrMagnitude > 0)
-                Character.Movement.Move(dir, speed);
+            Character.Movement.Move(dir, moveSpeed * speed);
         }
     }
 }

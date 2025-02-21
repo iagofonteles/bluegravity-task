@@ -28,6 +28,8 @@ namespace BlueGravity.CharacterComponents
         private void OnSpecial(InputValue v) => Special?.Invoke(v.isPressed);
         private void OnPause(InputValue v) => Pause?.Invoke(v.isPressed);
 
+        public void ResetDirection() => Direction = Vector3.zero;
+
         public void UnmapAll()
         {
             Move = null;
