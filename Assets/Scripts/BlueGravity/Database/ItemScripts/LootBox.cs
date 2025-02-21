@@ -13,16 +13,19 @@ namespace BlueGravity.ItemScripts
 
         public bool TryUse(object context)
         {
+            if (context is not Player player)
+                return false;
+
             var amount = Random.Range(1, 4);
             var index = Random.Range(0, contents.Count);
             var item = contents[index];
-            var bag = Game.Save.Get<ItemBag>();
+            var bag = player.Inventory;
 
             if (!bag.Fits(item, amount)) return false;
             bag.Add(item, amount);
             return true;
         }
     }
-    
+
     // ReSharper disable once UnusedType.Global
 }

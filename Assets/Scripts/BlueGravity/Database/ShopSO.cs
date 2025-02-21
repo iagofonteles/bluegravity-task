@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using BlueGravity.Database.ItemScripts;
 using Inventory;
 using UnityEngine;
 using Utility;
@@ -9,18 +10,17 @@ namespace BlueGravity
     public class ShopSO : ScriptableObject
     {
         [SerializeField] private int merchantMoney = -1;
+        [SerializeReference, TypeInstance] private IItemPrice buyPrice = new FullPrice();
+        [SerializeReference, TypeInstance] private IItemPrice sellPrice = new HalfPrice();
         [SerializeField] private List<Slot<ItemSO>> items;
 
         public Shop<ItemSO> GetShop()
         {
-            var shop = new Shop<ItemSO>(i => i.Price, i => i.Price / 2);
-            var playerInventory = Game.Save.Get<ItemBag>();
-            var playerMoney = Game.Save.Get<MoneyBag>();
-            var shopInventory = new ListInventory<ItemSO>(null, items);
-            var shopMoney = new Observable<int>(merchantMoney);
+            var inventory = new ListInventory<ItemSO>(null, items);
 
-            shop.SetMerchant(shopInventory, shopMoney);
-            shop.SetCostumer(playerInventory, playerMoney);
+            var shop = new Shop<ItemSO>(inventory, merchantMoney,
+                buyPrice.GetPrice, sellPrice.GetPrice);
+
             return shop;
         }
     }
