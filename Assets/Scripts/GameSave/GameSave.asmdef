@@ -1,0 +1,22 @@
+{
+    "name": "GameSave",
+    "rootNamespace": "",
+    "references": [
+        "YamlDotNet"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.yamldotnet.unity",
+            "expression": "",
+            "define": "YAMLDOTNET"
+        }
+    ],
+    "noEngineReferences": false
+}

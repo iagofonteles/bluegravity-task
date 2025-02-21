@@ -4,12 +4,6 @@ using System.IO;
 
 namespace Utility
 {
-    public interface IGameSave
-    {
-        void Save(string folder);
-        void Load(string folder);
-    }
-
     public class GameSave
     {
         Dictionary<Type, IGameSave> _saves = new();
@@ -49,6 +43,10 @@ namespace Utility
         {
             OnSaving?.Invoke(this);
             var path = Path.Combine(RootFolder, SaveName);
+            
+            if (!Directory.Exists(path))
+                Directory.CreateDirectory(path);
+
             foreach (var save in _saves.Values)
                 save.Save(path);
         }
