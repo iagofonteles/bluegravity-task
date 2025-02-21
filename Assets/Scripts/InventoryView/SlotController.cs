@@ -1,9 +1,10 @@
+using System;
 using UnityEngine.EventSystems;
 using ViewUtility;
 
 namespace Inventory.UI
 {
-    public class InventoryItemCountController : DataView<ISlot>
+    public class SlotController : DataView<ISlot>
     {
         protected override void Subscribe(ISlot data) { }
         protected override void Unsubscribe(ISlot data) { }
@@ -16,6 +17,23 @@ namespace Inventory.UI
             var data = view?.GetData();
             if (data is ISlot slot) Data.Item = slot.Item;
             else Data.Item = data;
+        }
+
+        public void SwapSlotContent(PointerEventData e)
+        {
+            var otherData = e.pointerDrag.GetComponent<DataView>()?.GetData();
+            if (Data == null || otherData is not ISlot other)
+                throw new Exception("Invalid Data");
+
+            var item = Data.Item;
+            var amount = Data.Amount;
+            var favorite = Data.Favorite;
+            Data.Item = other.Item;
+            Data.Amount = other.Amount;
+            Data.Favorite = other.Favorite;
+            other.Item = item;
+            other.Amount = amount;
+            other.Favorite = favorite;
         }
     }
 }

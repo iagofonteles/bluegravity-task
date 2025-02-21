@@ -33,8 +33,7 @@ namespace Inventory
         public int Add(T item, int amount)
         {
             if (item == null) throw new ArgumentNullException(nameof(item));
-            if (amount == 0) return 0;
-            if (amount < 0) return Remove(item, -amount);
+            if (amount <= 0) return 0;
 
             var initialAmount = amount;
             var maxStack = _getMaxStack(item);
@@ -59,8 +58,7 @@ namespace Inventory
         public int Remove(T item, int amount)
         {
             if (item == null) throw new ArgumentNullException(nameof(item));
-            if (amount == 0) return 0;
-            if (amount < 0) return Remove(item, -amount);
+            if (amount <= 0) return 0;
 
             var initialAmount = amount;
 
@@ -82,14 +80,15 @@ namespace Inventory
 
         public bool Fits(T item, int amount)
         {
+            if (item == null) return false;
             var maxStack = _getMaxStack(item);
             var freeSlots = EmptySlots.Count() * maxStack;
             var filledSlots = SlotsWith(item).Sum(s => maxStack - s.Amount);
             return freeSlots + filledSlots >= amount;
         }
 
-        public bool Contains(T item) => SlotsWith(item).Any(s => s.Amount > 0);
-        public int Count(T item) => SlotsWith(item).Sum(s => s.Amount);
+        public bool Contains(T item) => item != null && SlotsWith(item).Any(s => s.Amount > 0);
+        public int Count(T item) => item == null ? 0 : SlotsWith(item).Sum(s => s.Amount);
 
         public IEnumerator<ISlot> GetEnumerator() => (IEnumerator<ISlot>)_slots.GetEnumerator();
         IEnumerator IEnumerable.GetEnumerator() => _slots.GetEnumerator();

@@ -44,8 +44,7 @@ namespace Inventory
         public int Add(T item, int amount)
         {
             if (item == null) throw new ArgumentNullException(nameof(item));
-            if (amount == 0) return 0;
-            if (amount < 0) return Remove(item, -amount);
+            if (amount <= 0) return 0;
 
             var slot = SlotWith(item);
 
@@ -70,8 +69,7 @@ namespace Inventory
         public int Remove(T item, int amount)
         {
             if (item == null) throw new ArgumentNullException(nameof(item));
-            if (amount == 0) return 0;
-            if (amount < 0) return Remove(item, -amount);
+            if (amount <= 0) return 0;
 
             var slot = SlotWith(item);
             if (slot == null) return amount;
@@ -89,6 +87,7 @@ namespace Inventory
 
         public bool Fits(T item, int amount)
         {
+            if (item == null) return false;
             var slot = SlotWith(item);
             var maxStack = _getMaxStack(item);
             return slot == null || maxStack - slot.Amount >= amount;

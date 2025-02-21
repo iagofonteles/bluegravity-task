@@ -10,11 +10,9 @@ namespace Inventory
         IInventory _inventory;
         object _item;
         int _amount;
-        
-        public InventoryItemCounter(IInventory inventory)
-        {
-            _inventory = inventory;
-        }
+
+        public InventoryItemCounter() { }
+        public InventoryItemCounter(IInventory inventory) => Inventory = inventory;
 
         public IInventory Inventory
         {
@@ -59,7 +57,7 @@ namespace Inventory
             set => throw new InvalidOperationException();
         }
 
-        public bool IsEmpty { get; }
+        public bool IsEmpty => Item == null;
         public event Action<object> OnItemChanged;
         public event Action<int> OnAmountChanged;
         public event Action<bool> OnFavoriteChanged;

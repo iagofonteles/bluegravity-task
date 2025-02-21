@@ -1,7 +1,5 @@
-using System;
 using ViewUtility;
 using UnityEngine.Events;
-using UnityEngine.EventSystems;
 
 namespace Inventory.UI
 {
@@ -42,9 +40,9 @@ namespace Inventory.UI
             }
         }
 
-        private void OnFavoriteChanged(bool value)
+        private void OnItemChanged(object value)
         {
-            favorite.Invoke(value);
+            item.Invoke(value);
             notEmpty.Invoke(!Data.IsEmpty);
         }
 
@@ -54,21 +52,10 @@ namespace Inventory.UI
             notEmpty.Invoke(!Data.IsEmpty);
         }
 
-        public void SwapSlotContent(PointerEventData e)
+        private void OnFavoriteChanged(bool value)
         {
-            var otherData = e.pointerDrag.GetComponent<DataView>()?.GetData();
-            if (Data == null || otherData is not ISlot other)
-                throw new Exception("Invalid Data");
-
-            var item = Data.Item;
-            var amount = Data.Amount;
-            var favorite = Data.Favorite;
-            Data.Item = other.Item;
-            Data.Amount = other.Amount;
-            Data.Favorite = other.Favorite;
-            other.Item = item;
-            other.Amount = amount;
-            other.Favorite = favorite;
+            favorite.Invoke(value);
+            notEmpty.Invoke(!Data.IsEmpty);
         }
     }
 }

@@ -26,10 +26,10 @@ namespace Inventory
         {
             Inventory = inventory;
             Money = new(money);
-            
+
             GetBuyPrice.Value = getBuyPrice ?? throw new ArgumentNullException(nameof(getBuyPrice));
             GetSellPrice.Value = getSellPrice ?? throw new ArgumentNullException(nameof(getSellPrice));
-            
+
             GetBuyPrice.OnChanged += _ => OnPricesChanged?.Invoke();
             GetSellPrice.OnChanged += _ => OnPricesChanged?.Invoke();
         }
@@ -38,12 +38,12 @@ namespace Inventory
         public bool Sell(IShopActor costumer, T item, int amount) => Sell(costumer, (object)item, amount);
 
         public bool Buy(IShopActor costumer, object item, int amount)
-            => BuyFrom(((IShop)this).GetBuyPrice, costumer, this, item, amount);
+            => Transaction(((IShop)this).GetBuyPrice, costumer, this, item, amount);
 
         public bool Sell(IShopActor costumer, object item, int amount)
-            => BuyFrom(((IShop)this).GetSellPrice, this, costumer, item, amount);
+            => Transaction(((IShop)this).GetSellPrice, this, costumer, item, amount);
 
-        bool BuyFrom(Func<object, int> getPrice, IShopActor buyer, IShopActor seller, object item, int amount)
+        bool Transaction(Func<object, int> getPrice, IShopActor buyer, IShopActor seller, object item, int amount)
         {
             if (item == null) return false;
             var price = getPrice(item) * amount;
