@@ -1,13 +1,10 @@
 using System.Collections.Generic;
-using UnityEngine.Events;
 
 namespace ViewUtility
 {
     public abstract class DataView<T> : DataView
     {
         private T _data;
-
-        public UnityEvent<object> OnDataChanged;
 
         public T Data
         {
@@ -20,7 +17,7 @@ namespace ViewUtility
                 if (_data != null) Unsubscribe(_data);
                 _data = value;
                 if (_data != null) Subscribe(_data);
-                OnDataChanged.Invoke(value);
+                onDataChanged.Invoke(value);
             }
         }
 
