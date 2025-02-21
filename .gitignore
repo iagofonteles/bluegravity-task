@@ -98,3 +98,5 @@ fmod_editor.log
 
 Packages/packages-lock.json
 Assets/Plugins/FMOD/Cache
+Assets/3rdParty.meta
+Saves
