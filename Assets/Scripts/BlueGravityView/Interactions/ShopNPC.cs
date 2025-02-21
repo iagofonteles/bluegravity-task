@@ -1,4 +1,5 @@
 using Inventory;
+using Inventory.UI;
 using UnityEngine;
 
 namespace BlueGravity.UI
@@ -8,19 +9,20 @@ namespace BlueGravity.UI
         [SerializeField] private ShopSO shopTemplate;
         [SerializeField] private ShopController shopView;
 
-        private ShopController shopController;
-        private Shop<ItemSO> shop;
+        private ShopController _shopController;
+        private Shop<ItemSO> _shop;
 
         public void OpenShop(object interactor)
         {
             if (interactor is not Character character) return;
 
-            shop ??= shopTemplate.GetShop();
-            shop.SetCostumer(character.Inventory, character.Money);
+            _shop ??= shopTemplate.GetShop();
 
-            shopController ??= Instantiate(shopView);
-            shopController.SetData(shop);
-            shopController.gameObject.SetActive(true);
+            if(!_shopController)
+                _shopController = Instantiate(shopView);
+            _shopController.Costumer = character.Player;
+            _shopController.SetData(_shop);
+            _shopController.gameObject.SetActive(true);
         }
     }
 }

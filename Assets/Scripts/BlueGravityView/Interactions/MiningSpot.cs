@@ -14,7 +14,8 @@ namespace BlueGravity.UI
             
             void GetItem()
             {
-                character.Inventory.Add(item, 1);
+                var amount = character.Player.Stats.MiningPower.Value;
+                character.Player.Inventory.Add(item, amount);
                 if(getItemSfx) getItemSfx.Play();
             }
 
