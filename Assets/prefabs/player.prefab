@@ -343,70 +343,12 @@ MonoBehaviour:
   stateMachine: {fileID: 7068639361330305328}
   interactor: {fileID: 3873745032027769472}
   stats:
+    health:
+      _value: 0
+    mana:
+      _value: 0
     moveSpeed:
       _value: 5
-  inventory:
-    _slots:
-    - _item: {fileID: 0}
-      _amount: 0
-      _favorite: 0
-    - _item: {fileID: 0}
-      _amount: 0
-      _favorite: 0
-    - _item: {fileID: 0}
-      _amount: 0
-      _favorite: 0
-    - _item: {fileID: 0}
-      _amount: 0
-      _favorite: 0
-    - _item: {fileID: 0}
-      _amount: 0
-      _favorite: 0
-    - _item: {fileID: 0}
-      _amount: 0
-      _favorite: 0
-    - _item: {fileID: 0}
-      _amount: 0
-      _favorite: 0
-    - _item: {fileID: 0}
-      _amount: 0
-      _favorite: 0
-    - _item: {fileID: 0}
-      _amount: 0
-      _favorite: 0
-    - _item: {fileID: 0}
-      _amount: 0
-      _favorite: 0
-    - _item: {fileID: 0}
-      _amount: 0
-      _favorite: 0
-    - _item: {fileID: 0}
-      _amount: 0
-      _favorite: 0
-    - _item: {fileID: 0}
-      _amount: 0
-      _favorite: 0
-    - _item: {fileID: 0}
-      _amount: 0
-      _favorite: 0
-    - _item: {fileID: 0}
-      _amount: 0
-      _favorite: 0
-    - _item: {fileID: 0}
-      _amount: 0
-      _favorite: 0
-    - _item: {fileID: 0}
-      _amount: 0
-      _favorite: 0
-    - _item: {fileID: 0}
-      _amount: 0
-      _favorite: 0
-    - _item: {fileID: 0}
-      _amount: 0
-      _favorite: 0
-    - _item: {fileID: 0}
-      _amount: 0
-      _favorite: 0
   states:
     list:
     - rid: 5184424298761682944
@@ -1111,7 +1053,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7807477701687185173}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
