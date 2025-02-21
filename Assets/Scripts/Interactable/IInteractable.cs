@@ -24,7 +24,7 @@ namespace Interactable
 
         Vector3 Position { get; }
         float Range { get; }
-        void Interact(IInteractor interactor);
+        void Interact(object interactor);
         ObservableList<IInteractor> InteractorsInRange { get; }
     }
 }

@@ -12,9 +12,15 @@ namespace Interactable
         public Vector3 Position => transform.position;
         public float Range => range;
         public Observable<IInteractable> NearestInteracble { get; } = new();
-        
+
         private void Awake() => NearestInteracble.OnValueChanged += (n, _) => OnNearestChanged.Invoke(n);
         private void Update() => ((IInteractor)this).UpdateInteractable();
         private void OnDisable() => NearestInteracble.Value = null;
+
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.white;
+            Gizmos.DrawWireSphere(transform.position, range);
+        }
     }
 }
