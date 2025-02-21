@@ -17,7 +17,7 @@ namespace Utility
     /// </summary>
     public static class TypeCache
     {
-        private static IEnumerable<Assembly> _assemblies;
+        private static IEnumerable<Assembly> _assemblies = AppDomain.CurrentDomain.GetAssemblies();
         private static IReadOnlyList<Type> _foundTypes;
         private static Dictionary<Type, TypesGroup> _cache = new();
 

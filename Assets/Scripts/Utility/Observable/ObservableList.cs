@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -11,9 +12,10 @@ namespace Utility
     /// <summary>
     /// Made this cause ObservableCollection inst serializable
     /// </summary>
+    [Serializable]
     public class ObservableList<T> : IList<T>, INotifyCollectionChanged
     {
-        [SerializeField] private List<T> _list = new();
+        [SerializeField] private List<T> _list;
 
         public event NotifyCollectionChangedEventHandler CollectionChanged;
 
@@ -33,6 +35,9 @@ namespace Utility
 
         public IEnumerator<T> GetEnumerator() => _list.GetEnumerator();
         IEnumerator IEnumerable.GetEnumerator() => ((IEnumerable)_list).GetEnumerator();
+
+        public ObservableList() => _list = new();
+        public ObservableList(IEnumerable<T> items) => _list = new(items);
 
         public void Insert(int index, T item)
         {
