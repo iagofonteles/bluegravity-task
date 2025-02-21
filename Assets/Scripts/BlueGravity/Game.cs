@@ -1,4 +1,3 @@
-using System.IO;
 using UnityEngine;
 using Utility;
 
@@ -10,15 +9,12 @@ namespace BlueGravity
 
         static Game()
         {
-            var saveFolder = Path.Combine(Application.persistentDataPath, "Saves");
+            var dataPath = Application.isEditor ? Application.dataPath + "/.." : Application.persistentDataPath;
+            var saveFolder = dataPath + "/Saves";
+            Debug.Log($"saveFolder: {saveFolder}");
+
             Save = new GameSave(saveFolder);
             Save.Load("Default");
-        }
-
-        [RuntimeInitializeOnLoadMethod]
-        static void InitTypeCache()
-        {
-            TypeCache.SetAssemblies(new[] { typeof(ItemSO).Assembly });
         }
     }
 }

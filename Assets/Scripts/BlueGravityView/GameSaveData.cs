@@ -4,15 +4,22 @@ using ViewUtility;
 
 namespace BlueGravity.UI
 {
+    /// <summary>
+    /// feed an object from Game.Save into object DataView 
+    /// </summary>
     public class GameSaveData : MonoBehaviour
     {
-        [TypeInstance, SerializeReference] private IGameSave saveData;
         public bool overrideData;
+        [TypeInstance, SerializeReference] private IGameSave saveData;
 
-        void OnEnable()
+        void Awake()
         {
             if (overrideData) Game.Save.Set(saveData);
-            else saveData = Game.Save.Get(saveData.GetType());
+        }
+
+        private void Start()
+        {
+            saveData = Game.Save.Get(saveData.GetType());
             GetComponent<DataView>()?.SetData(saveData);
         }
     }

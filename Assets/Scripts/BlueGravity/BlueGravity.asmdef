@@ -5,7 +5,8 @@
         "Utility",
         "Inventory",
         "Unity.InputSystem",
-        "Interactable"
+        "Interactable",
+        "GameSave"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
