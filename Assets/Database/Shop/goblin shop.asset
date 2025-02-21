@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   merchantMoney: -1
   buyPrice:
-    rid: 5184424298761682983
+    rid: 5184424316541075980
   sellPrice:
-    rid: 5184424298761682984
+    rid: 5184424316541075981
   items:
   - item: {fileID: 11400000, guid: e18783a291b30f2439c0497235c170bd, type: 2}
     amount: 1
@@ -39,9 +39,9 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 5184424298761682983
-      type: {class: FullPrice, ns: BlueGravity.Database.ItemScripts, asm: BlueGravity}
+    - rid: 5184424316541075980
+      type: {class: FullPrice, ns: BlueGravity.ItemScripts, asm: BlueGravity}
       data: 
-    - rid: 5184424298761682984
-      type: {class: HalfPrice, ns: BlueGravity.Database.ItemScripts, asm: BlueGravity}
+    - rid: 5184424316541075981
+      type: {class: HalfPrice, ns: BlueGravity.ItemScripts, asm: BlueGravity}
       data: 
