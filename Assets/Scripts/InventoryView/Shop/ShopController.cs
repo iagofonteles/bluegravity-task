@@ -1,35 +1,56 @@
-using Inventory;
+using System;
 using UnityEngine.Events;
 using ViewUtility;
+// ReSharper disable UnusedMember.Global
 
-namespace BlueGravity.UI
+namespace Inventory.UI
 {
-    public abstract class ShopController<T> : DataView<Shop<T>>
+    public class ShopController : DataView<IShop>
     {
-        public int buyAmount = 1;
+        private static int _amount = 1;
+        
+        public DataView merchantView;
+        public DataView costumerView;
+        public UnityEvent<DataView> onTransactionSuceed;
+        public UnityEvent<DataView> onTransactionFailed;
 
-        public UnityEvent<DataView> OnTransactionSuceed;
-        public UnityEvent<DataView> OnTransactionFailed;
+        public IShopActor Costumer { get; set; }
 
-        protected override void Subscribe(Shop<T> data) { }
-        protected override void Unsubscribe(Shop<T> data) { }
+        protected override void Subscribe(IShop data)
+        {
+            merchantView.TrySetData(data);
+            costumerView.TrySetData(Costumer);
+        }
+
+        protected override void Unsubscribe(IShop data)
+        {
+            merchantView.TrySetData(null);
+            costumerView.TrySetData(null);
+        }
+
+        public void IncreaseAmount() => _amount = Math.Min(_amount + 1, 10);
+        public void DecreaseAmount() => _amount = Math.Max(_amount - 1, 1);
 
         public void Buy(DataView view)
         {
-            var item = view.GetData<T>();
-            var result = Data.Buy(item, buyAmount);
+            if (Costumer == null) throw new Exception("no Costumer set");
 
-            if (result) OnTransactionSuceed.Invoke(view);
-            else OnTransactionFailed.Invoke(view);
+            var item = view.GetData();
+            var result = Data.Buy(Costumer, item, _amount);
+
+            if (result) onTransactionSuceed.Invoke(view);
+            else onTransactionFailed.Invoke(view);
         }
 
         public void Sell(DataView view)
         {
-            var item = view.GetData<T>();
-            var result = Data.Sell(item, buyAmount);
+            if (Costumer == null) throw new Exception("no Costumer set");
 
-            if (result) OnTransactionSuceed.Invoke(view);
-            else OnTransactionFailed.Invoke(view);
+            var item = view.GetData();
+            var result = Data.Sell(Costumer, item, _amount);
+
+            if (result) onTransactionSuceed.Invoke(view);
+            else onTransactionFailed.Invoke(view);
         }
     }
 }

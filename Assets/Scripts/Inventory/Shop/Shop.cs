@@ -1,5 +1,4 @@
 using System;
-using Inventory.Internal;
 using Utility;
 
 namespace Inventory
@@ -12,38 +11,41 @@ namespace Inventory
     /// </summary>
     public class Shop<T> : IShop
     {
-        IShopActor IShop.Merchant => Merchant;
-        IShopActor IShop.Costumer => Costumer;
-
-        public ShopActor<T> Merchant { get; } = new();
-        public ShopActor<T> Costumer { get; } = new();
+        public Observable<int> Money { get; }
+        public IInventory Inventory { get; }
 
         public Observable<Func<T, int>> GetBuyPrice = new();
         public Observable<Func<T, int>> GetSellPrice = new();
 
-        public Shop(Func<T, int> getBuyPrice, Func<T, int> getSellPrice)
+        public event Action OnPricesChanged;
+
+        int IShop.GetBuyPrice(object item) => GetBuyPrice.Value.Invoke((T)item);
+        int IShop.GetSellPrice(object item) => GetSellPrice.Value.Invoke((T)item);
+
+        public Shop(IInventory<T> inventory, int money, Func<T, int> getBuyPrice, Func<T, int> getSellPrice)
         {
+            Inventory = inventory;
+            Money = new(money);
+            
             GetBuyPrice.Value = getBuyPrice ?? throw new ArgumentNullException(nameof(getBuyPrice));
             GetSellPrice.Value = getSellPrice ?? throw new ArgumentNullException(nameof(getSellPrice));
+            
+            GetBuyPrice.OnChanged += _ => OnPricesChanged?.Invoke();
+            GetSellPrice.OnChanged += _ => OnPricesChanged?.Invoke();
         }
 
-        public void SetMerchant(IInventory<T> inventory, Observable<int> money)
-        {
-            Merchant.Inventory = inventory;
-            Merchant.Money = money;
-        }
+        public bool Buy(IShopActor costumer, T item, int amount) => Buy(costumer, (object)item, amount);
+        public bool Sell(IShopActor costumer, T item, int amount) => Sell(costumer, (object)item, amount);
 
-        public void SetCostumer(IInventory<T> inventory, Observable<int> money)
-        {
-            Costumer.Inventory = inventory;
-            Costumer.Money = money;
-        }
+        public bool Buy(IShopActor costumer, object item, int amount)
+            => BuyFrom(((IShop)this).GetBuyPrice, costumer, this, item, amount);
 
-        public bool Buy(T item, int amount) => BuyFrom(GetBuyPrice.Value, Costumer, Merchant, item, amount);
-        public bool Sell(T item, int amount) => BuyFrom(GetSellPrice.Value, Merchant, Costumer, item, amount);
+        public bool Sell(IShopActor costumer, object item, int amount)
+            => BuyFrom(((IShop)this).GetSellPrice, this, costumer, item, amount);
 
-        bool BuyFrom(Func<T, int> getPrice, ShopActor<T> buyer, ShopActor<T> seller, T item, int amount)
+        bool BuyFrom(Func<object, int> getPrice, IShopActor buyer, IShopActor seller, object item, int amount)
         {
+            if (item == null) return false;
             var price = getPrice(item) * amount;
             var availableMoney = buyer.Money.Value;
             var availableItems = seller.Inventory.Count(item);
