@@ -4,9 +4,10 @@ namespace Inventory
 {
     public interface ISlot
     {
-        object Item { get; }
-        int Amount { get; }
-        bool Favorite { get; }
+        object Item { get; set; }
+        int Amount { get; set;}
+        bool Favorite { get; set;}
+        bool IsEmpty { get; }
     }
 
     public interface ISlotCallbacks

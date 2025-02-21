@@ -17,6 +17,8 @@ namespace Inventory
 
         public IReadOnlyList<Slot<T>> Slots => _slots;
 
+        public event IInventory.ItemChangedHandler OnItemChanged;
+
         public SlotInventory(int size, Func<T, int> getMaxStack = null)
         {
             _slots = new Slot<T>[size];
@@ -34,6 +36,7 @@ namespace Inventory
             if (amount == 0) return 0;
             if (amount < 0) return Remove(item, -amount);
 
+            var initialAmount = amount;
             var maxStack = _getMaxStack(item);
 
             foreach (var slot in SlotsWith(item).Concat(EmptySlots))
@@ -48,6 +51,7 @@ namespace Inventory
                 if (amount == 0) break;
             }
 
+            OnItemChanged?.Invoke(item, initialAmount - amount);
             return amount;
         }
 
@@ -57,6 +61,8 @@ namespace Inventory
             if (item == null) throw new ArgumentNullException(nameof(item));
             if (amount == 0) return 0;
             if (amount < 0) return Remove(item, -amount);
+
+            var initialAmount = amount;
 
             foreach (var slot in SlotsWith(item))
             {
@@ -70,6 +76,7 @@ namespace Inventory
                 if (amount == 0) break;
             }
 
+            OnItemChanged?.Invoke(item, amount - initialAmount);
             return amount;
         }
 

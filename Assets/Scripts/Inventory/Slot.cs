@@ -7,48 +7,52 @@ namespace Inventory
     [Serializable]
     public class Slot<T> : ISlot, ISlotCallbacks
     {
-        [SerializeField] private T _item;
-        [SerializeField] private int _amount;
-        [SerializeField] private bool _favorite;
+        [SerializeField] private T item;
+        [SerializeField] private int amount;
+        [SerializeField] private bool favorite;
 
         public event Action<object> OnItemChanged;
         public event Action<int> OnAmountChanged;
         public event Action<bool> OnFavoriteChanged;
 
-        object ISlot.Item => Item;
+        object ISlot.Item
+        {
+            get => Item;
+            set => Item = value is T v ? v : default;
+        }
 
         public bool IsEmpty => !Favorite && Amount == 0;
 
         public T Item
         {
-            get => _item;
+            get => item;
             set
             {
-                if (EqualityComparer<T>.Default.Equals(value, _item))
+                if (EqualityComparer<T>.Default.Equals(value, item))
                     return;
-                _item = value;
+                item = value;
                 OnItemChanged?.Invoke(value);
             }
         }
 
         public int Amount
         {
-            get => _amount;
+            get => amount;
             set
             {
-                if (value == _amount) return;
-                _amount = value;
+                if (value == amount) return;
+                amount = value;
                 OnAmountChanged?.Invoke(value);
             }
         }
 
         public bool Favorite
         {
-            get => _favorite;
+            get => favorite;
             set
             {
-                if (value == _favorite) return;
-                _favorite = value;
+                if (value == favorite) return;
+                favorite = value;
                 OnFavoriteChanged?.Invoke(value);
             }
         }

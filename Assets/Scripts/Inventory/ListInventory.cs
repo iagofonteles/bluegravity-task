@@ -15,6 +15,8 @@ namespace Inventory
 
         private Slot<T> SlotWith(T item) => _slots.FirstOrDefault(s => item.Equals(s.Item));
 
+        public event IInventory.ItemChangedHandler OnItemChanged;
+
         public event NotifyCollectionChangedEventHandler CollectionChanged
         {
             add => _slots.CollectionChanged += value;
@@ -26,10 +28,15 @@ namespace Inventory
         public ListInventory(Func<T, int> getMaxStack = null, IEnumerable<Slot<T>> items = null)
         {
             _getMaxStack = getMaxStack ?? _getMaxStack;
-            
+
             if (items != null)
                 foreach (var slot in items)
-                    _slots.Add(slot);
+                    _slots.Add(new Slot<T>
+                    {
+                        Item = slot.Item,
+                        Amount = slot.Amount,
+                        Favorite = slot.Favorite,
+                    });
         }
 
         /// <summary>Prioritize already filled slots</summary>
@@ -55,6 +62,7 @@ namespace Inventory
             slot.Amount += delta;
             amount -= delta;
 
+            OnItemChanged?.Invoke(item, delta);
             return amount;
         }
 
@@ -75,6 +83,7 @@ namespace Inventory
             if (slot.IsEmpty)
                 _slots.Remove(slot);
 
+            OnItemChanged?.Invoke(item, delta);
             return amount;
         }
 
