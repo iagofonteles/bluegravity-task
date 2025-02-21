@@ -3,7 +3,9 @@
     "rootNamespace": "",
     "references": [
         "Utility",
-        "Inventory"
+        "Inventory",
+        "Unity.InputSystem",
+        "Interactable"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

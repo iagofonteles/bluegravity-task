@@ -8,7 +8,7 @@ namespace BlueGravity.Editor
         [InitializeOnLoadMethod]
         static void InitEditor()
         {
-            TypeCache.SetAssemblies(new[] { typeof(Item).Assembly });
+            TypeCache.SetAssemblies(new[] { typeof(ItemSO).Assembly });
         }
     }
 }

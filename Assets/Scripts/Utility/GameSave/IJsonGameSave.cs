@@ -19,6 +19,7 @@ namespace Utility
         public static void LoadData(string folder, object obj)
         {
             var file = folder + obj.GetType().Name + ".json";
+            if (!File.Exists(file)) return;
             var json = File.ReadAllText(file);
             JsonUtility.FromJsonOverwrite(json, obj);
         }

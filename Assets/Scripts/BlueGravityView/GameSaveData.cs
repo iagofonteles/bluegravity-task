@@ -1,5 +1,6 @@
 using UnityEngine;
 using Utility;
+using ViewUtility;
 
 namespace BlueGravity.UI
 {
@@ -12,6 +13,7 @@ namespace BlueGravity.UI
         {
             if (overrideData) Game.Save.Set(saveData);
             else saveData = Game.Save.Get(saveData.GetType());
+            GetComponent<DataView>()?.SetData(saveData);
         }
     }
 }

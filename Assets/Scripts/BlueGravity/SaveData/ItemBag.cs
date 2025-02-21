@@ -1,9 +1,11 @@
+using System;
 using Inventory;
 using Utility;
 
 namespace BlueGravity
 {
-    public class ItemBag : SlotInventory<Item>, IJsonGameSave
+    [Serializable]
+    public class ItemBag : SlotInventory<ItemSO>, IJsonGameSave
     {
         public ItemBag() : base(20, i => i.MaxStack) { }
     }

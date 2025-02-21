@@ -12,12 +12,13 @@ namespace BlueGravity
         {
             var saveFolder = Path.Combine(Application.persistentDataPath, "Saves");
             Save = new GameSave(saveFolder);
+            Save.Load("Default");
         }
 
         [RuntimeInitializeOnLoadMethod]
         static void InitTypeCache()
         {
-            TypeCache.SetAssemblies(new[] { typeof(Item).Assembly });
+            TypeCache.SetAssemblies(new[] { typeof(ItemSO).Assembly });
         }
     }
 }

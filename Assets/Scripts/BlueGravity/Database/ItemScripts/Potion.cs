@@ -11,9 +11,11 @@ namespace BlueGravity.ItemScripts
 
         public bool TryUse(object context)
         {
-            var player = Game.Save.Get<PlayerStats>();
-            player.Health.Value += healthAmount;
-            player.Mana.Value += manaAmount;
+            if (context is not Character character) 
+                return false;
+            
+            character.Stats.Health.Value += healthAmount;
+            character.Stats.Mana.Value += manaAmount;
             return true;
         }
     }

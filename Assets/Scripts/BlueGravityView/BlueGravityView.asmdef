@@ -5,7 +5,9 @@
         "BlueGravity",
         "DataView",
         "Inventory",
-        "Utility"
+        "Utility",
+        "InventoryView",
+        "Interactable"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
