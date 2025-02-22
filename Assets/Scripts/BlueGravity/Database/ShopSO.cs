@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using BlueGravity.Database.ItemScripts;
+using BlueGravity.ItemScripts;
 using Inventory;
 using UnityEngine;
 using Utility;

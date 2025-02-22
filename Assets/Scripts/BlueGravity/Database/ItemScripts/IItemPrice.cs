@@ -2,7 +2,7 @@ using UnityEngine;
 
 // ReSharper disable UnusedType.Global
 
-namespace BlueGravity.Database.ItemScripts
+namespace BlueGravity.ItemScripts
 {
     public interface IItemPrice
     {

@@ -13,6 +13,8 @@ namespace BlueGravity
         [SerializeField] private string description;
         [SerializeField] private int price;
         [SerializeField] private int maxStack;
+        [SerializeField] private string type;
+        [SerializeField] private string[] tags;
         [SerializeField] private TypeInstances<IItemScript> scripts;
 
         public string DisplayName => displayName;
@@ -20,6 +22,8 @@ namespace BlueGravity
         public string Description => description;
         public int Price => price;
         public int MaxStack => maxStack;
+        public string Type => type;
+        public string[] Tags => tags;
         public IReadOnlyList<IItemScript> Scripts => scripts;
 
         public T GetScript<T>() where T : IItemScript => scripts.OfType<T>().FirstOrDefault();
