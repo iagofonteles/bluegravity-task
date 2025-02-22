@@ -12,6 +12,7 @@ namespace BlueGravity.Internal
             TypeCache.SetAssemblies(new[]
             {
                 typeof(ItemSO).Assembly,
+                typeof(ItemView).Assembly,
                 typeof(DataView).Assembly,
             });
         }

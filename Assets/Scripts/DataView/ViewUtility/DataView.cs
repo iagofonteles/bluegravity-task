@@ -32,6 +32,11 @@ namespace ViewUtility
     public static class DataViewExtensions
     {
         /// <summary>Use this for optional views in inspector</summary>
+        public static object TryGetData(this DataView view, object data)
+        {
+            return view ? view.GetData() : null;
+        }
+
         public static void TrySetData(this DataView view, object data)
         {
             if (view) view.SetData(data);
