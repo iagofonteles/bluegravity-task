@@ -34,12 +34,18 @@ namespace BlueGravity
         {
             var player = IYamlGameSave.LoadData(_deserializer, folder, this) as Player;
 
-            if(player._inventory != null)
-            player.Inventory.SetSlots(player._inventory);
+            if (player._inventory != null)
+                player.Inventory.SetSlots(player._inventory);
 
-            if(player._hotbar != null)
-            for (int i = 0; i < player.Hotbar.Length; i++)
-                player.Hotbar[i].Item = player._hotbar[i];
+            if (player._hotbar != null)
+                for (int i = 0; i < player.Hotbar.Length; i++)
+                    player.Hotbar[i].Item = player._hotbar[i];
+
+            foreach (var equip in player.Equipments)
+            {
+                equip.OnChanged -= player.RecalculateStats;
+                equip.OnChanged += player.RecalculateStats;
+            }
 
             player.RecalculateStats(null);
             return player;

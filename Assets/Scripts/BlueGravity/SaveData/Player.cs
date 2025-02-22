@@ -1,4 +1,3 @@
-using System;
 using System.Linq;
 using Inventory;
 using Utility;
@@ -26,7 +25,7 @@ namespace BlueGravity
         {
             for (int i = 0; i < Hotbar.Length; i++)
                 Hotbar[i] = new(Inventory);
-
+            
             foreach (var equip in Equipments)
                 equip.OnChanged += RecalculateStats;
         }

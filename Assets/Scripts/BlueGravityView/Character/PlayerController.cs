@@ -19,6 +19,18 @@ namespace BlueGravity.UI
             var item = data is Slot<ItemSO> s ? s.Item : data as ItemSO;
             if (item) EquipItem(item);
         }
+        
+        public void UseItem(DataView itemView)
+        {
+            var item = itemView.GetData<ItemSO>();
+            var script = item.GetScript<IUsabeItem>();
+            var equip = item.GetScript<Equipment>();
+
+            if (script?.TryUse(Data) ?? false)
+                Data.Inventory.Remove(item, 1);
+
+            if (equip != null) EquipItem(item);
+        }
 
         public void UnequipItem(DataView equipSlotView)
         {
