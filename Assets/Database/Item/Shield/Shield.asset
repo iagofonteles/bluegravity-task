@@ -17,3 +17,17 @@ MonoBehaviour:
   description: Shield description
   price: 20
   maxStack: 1
+  type: 
+  tags: []
+  scripts:
+    list:
+    - rid: 5184424316541076030
+  references:
+    version: 2
+    RefIds:
+    - rid: 5184424316541076030
+      type: {class: Equipment, ns: BlueGravity.ItemScripts, asm: BlueGravity}
+      data:
+        slot: 0
+        moveSpeedMultiplier: -0.2
+        mininPower: 0

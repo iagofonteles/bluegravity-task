@@ -17,30 +17,41 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: cd14cfe26fb82924894ab2d2cfadb62d
   m_SerializeEntries:
-  - m_GUID: 1543f498dbd8193489f45e15cc1dfa0c
-    m_Address: Assets/database/Item/Diamond/Diamond.asset
+  - m_GUID: 9e52e3ed15a52d3468b49dce838cbbb4
+    m_Address: ItemSO/Potion Box/Potion Box.asset
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 594dd192011725c459c9a2fe8b32e7e0
-    m_Address: Assets/database/Item/Health Potion 1/Health Potion 1.asset
-    m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - ItemSO
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6d989b032e181604597026a29d5b8cb6
-    m_Address: Assets/database/Item/Mana Potion 1/Mana Potion 1.asset
+    m_Address: ItemSO/Mana Potion 1/Mana Potion 1.asset
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - ItemSO
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9e52e3ed15a52d3468b49dce838cbbb4
-    m_Address: Assets/database/Item/Potion Box/Potion Box.asset
+  - m_GUID: 594dd192011725c459c9a2fe8b32e7e0
+    m_Address: ItemSO/Health Potion 1/Health Potion 1.asset
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - ItemSO
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9357bc4d5ed5ce748850b39c6c8def3f
-    m_Address: ItemSO
+  - m_GUID: 1543f498dbd8193489f45e15cc1dfa0c
+    m_Address: ItemSO/Diamond/Diamond.asset
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - ItemSO
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 399a18ab0d75c1f4faac58493ba9b0b0
+    m_Address: ItemSO/Shield/Shield.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemSO
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e18783a291b30f2439c0497235c170bd
+    m_Address: ItemSO/Sword/Sword.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemSO
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 4fdbde4d5e269a9499c3bf6d9e6ee9e6, type: 2}

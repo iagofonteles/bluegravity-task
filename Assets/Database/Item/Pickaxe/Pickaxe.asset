@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28d8c97219964cf59f2fe6169f2f24b5, type: 3}
-  m_Name: Sword
+  m_Name: Pickaxe
   m_EditorClassIdentifier: 
-  displayName: Sword
-  icon: {fileID: 21300000, guid: 1ead2ffc9ec93ea4a88f0597f8d546af, type: 3}
-  description: Sword
-  price: 100
-  maxStack: 1
+  displayName: Boots
+  icon: {fileID: 21300000, guid: dd638b641203fb64bae7e7a288f61e3a, type: 3}
+  description: Boots description
+  price: 200
+  maxStack: 99
   type: 
   tags: []
   scripts:
     list:
-    - rid: 5184424316541076031
+    - rid: 5184424316541076032
   references:
     version: 2
     RefIds:
-    - rid: 5184424316541076031
+    - rid: 5184424316541076032
       type: {class: Equipment, ns: BlueGravity.ItemScripts, asm: BlueGravity}
       data:
         slot: 0
         moveSpeedMultiplier: 0
-        mininPower: 2
+        mininPower: 0
