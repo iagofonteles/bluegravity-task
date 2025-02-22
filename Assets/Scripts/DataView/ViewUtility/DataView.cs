@@ -7,13 +7,20 @@ namespace ViewUtility
 {
     public abstract class DataView : MonoBehaviour, IDataView
     {
+        public UnityEvent<object> onDataChanged;
+        
         public abstract object GetData();
         public abstract void SetData(object data);
         public void CopyData(DataView view) => SetData(view.GetData());
         public void ResetData() => SetData(null);
+        public void DestroyTarget(Object target) => Destroy(target);
 
-        [FormerlySerializedAs("OnDataChanged")]
-        public UnityEvent<object> onDataChanged;
+        public void RefreshData()
+        {
+            var data = GetData(); 
+            SetData(null);
+            SetData(data);
+        }
 
         public T GetData<T>(bool allowNull = false)
         {
@@ -21,8 +28,6 @@ namespace ViewUtility
             if (GetData() is not T data) throw new DataTypeExeption<T>(GetData());
             return data;
         }
-
-        public void DestroyTarget(Object target) => Destroy(target);
 
         public void SetDataFromDrag(PointerEventData e)
         {
@@ -39,6 +44,7 @@ namespace ViewUtility
             return view ? view.GetData() : null;
         }
 
+        /// <summary>Use this for optional views in inspector</summary>
         public static void TrySetData(this DataView view, object data)
         {
             if (view) view.SetData(data);
