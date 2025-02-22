@@ -1,14 +1,16 @@
 using System;
 using StateMachines;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace BlueGravity.CharacterStates
 {
+    [Serializable]
     public class DynamicStateArgs
     {
         public string animation;
-        public Action trigger;
         public bool moveToCancel = true;
+        public UnityEvent<Character> trigger;
     }
 
     public class DynamicState : CharacterState
@@ -39,7 +41,7 @@ namespace BlueGravity.CharacterStates
             switch (message)
             {
                 case "return": Machine.SetState(null); break;
-                case "trigger": args.trigger?.Invoke(); break;
+                case "trigger": args.trigger?.Invoke(Character); break;
             }
         }
     }

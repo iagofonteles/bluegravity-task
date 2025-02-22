@@ -32,6 +32,7 @@ namespace BlueGravity.CharacterComponents
             var scale = body.transform.localScale;
             scale.x = Mathf.Abs(scale.x);
             scale.x = Mathf.Abs(scale.x) * xSpeed < 0 ? -1 : 1;
+            body.transform.localScale = scale;
         }
     }
 }

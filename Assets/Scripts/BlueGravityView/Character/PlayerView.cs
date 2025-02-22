@@ -1,4 +1,3 @@
-using UnityEngine;
 using UnityEngine.Events;
 using ViewUtility;
 using DataView = ViewUtility.DataView;
@@ -14,7 +13,6 @@ namespace BlueGravity.UI
         public DataView equipmentsView;
 
         public UnityEvent<string> displayName;
-        public UnityEvent<Vector3> position;
 
         protected override void Subscribe(Player data)
         {
@@ -25,7 +23,6 @@ namespace BlueGravity.UI
             equipmentsView.TrySetData(data.Equipments);
 
             displayName.Invoke(data.DisplayName);
-            position.Invoke(data.Position);
         }
 
         protected override void Unsubscribe(Player data)

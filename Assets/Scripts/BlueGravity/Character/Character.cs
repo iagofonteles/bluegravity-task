@@ -1,3 +1,4 @@
+using System;
 using BlueGravity.CharacterComponents;
 using Interactable;
 using StateMachines;
@@ -20,13 +21,17 @@ namespace BlueGravity
         public CharacterMovement Movement => movement;
         public StateMachine StateMachine => stateMachine;
         public IInteractor Interactor => interactor;
-        
+
         public Player Player { get; private set; }
 
-        private void Awake()
+        public void SetPlayer(object data)
         {
+            if (Player != null) return;
+            if (data is not Player p)
+                throw new Exception("data is not Player");
+
+            Player = p;
             stateMachine.StartMachine(this, states);
-            Player = Game.Save.Get<Player>();
         }
     }
 }
