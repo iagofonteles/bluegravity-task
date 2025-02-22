@@ -54,9 +54,13 @@ namespace Inventory
             if (availableItems >= 0 && availableItems < amount) return false;
             if (!buyer.Inventory.Fits(item, amount)) return false;
 
-            seller.Money.Value += price;
-            buyer.Money.Value -= price;
-            seller.Inventory.Remove(item, amount);
+            if (seller.Money.Value >= 0)
+                seller.Money.Value += price;
+            if (buyer.Money.Value >= 0)
+                buyer.Money.Value -= price;
+
+            if (availableItems > 0)
+                seller.Inventory.Remove(item, amount);
             buyer.Inventory.Add(item, amount);
 
             return true;

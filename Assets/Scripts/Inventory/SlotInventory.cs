@@ -28,6 +28,8 @@ namespace Inventory
                 _slots[i] = new();
         }
 
+        public void SetSlots(Slot<T>[] slots) => _slots = slots;
+
         /// <summary>Prioritize already filled slots</summary>
         /// <returns>Amount of itens not added due to capacity.</returns>
         public int Add(T item, int amount)
@@ -81,9 +83,11 @@ namespace Inventory
         public bool Fits(T item, int amount)
         {
             if (item == null) return false;
+            if (SlotsWith(item).Any(s => s.Amount < 0)) return true; // infinite slot
+
             var maxStack = _getMaxStack(item);
-            var freeSlots = EmptySlots.Count() * maxStack;
             var filledSlots = SlotsWith(item).Sum(s => maxStack - s.Amount);
+            var freeSlots = EmptySlots.Count() * maxStack;
             return freeSlots + filledSlots >= amount;
         }
 

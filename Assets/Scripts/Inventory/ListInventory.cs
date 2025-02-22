@@ -90,7 +90,9 @@ namespace Inventory
             if (item == null) return false;
             var slot = SlotWith(item);
             var maxStack = _getMaxStack(item);
-            return slot == null || maxStack - slot.Amount >= amount;
+
+            if (slot == null || slot.Amount < 0) return true;
+            return maxStack - slot.Amount >= amount;
         }
 
         public bool Contains(T item) => SlotWith(item) != null;

@@ -48,16 +48,17 @@ namespace Inventory
         public int Amount
         {
             get => _amount;
-            set => throw new InvalidOperationException();
+            set { }
         }
 
         public bool Favorite
         {
             get => false;
-            set => throw new InvalidOperationException();
+            set { }
         }
 
         public bool IsEmpty => Item == null;
+
         public event Action<object> OnItemChanged;
         public event Action<int> OnAmountChanged;
         public event Action<bool> OnFavoriteChanged;
