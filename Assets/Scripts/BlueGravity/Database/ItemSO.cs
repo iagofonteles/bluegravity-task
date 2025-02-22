@@ -20,7 +20,7 @@ namespace BlueGravity
 
         public string DisplayName => displayName ??= Game.I18n.GetTable("itemso")[name];
         public Sprite Icon => icon;
-        public string Description => description ??= Game.I18n.GetTable("itemso")[name + "desc"];
+        public string Description => description ??= Game.I18n.GetTable("itemso")[name + " desc"];
         public int Price => price;
         public int MaxStack => maxStack;
         public string Type => type;
