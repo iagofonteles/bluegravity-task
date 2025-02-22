@@ -26,7 +26,7 @@ Scripts Package
 like i did with YamlDotNet asset from the store. We can easily reuse its functionality withou introducing more assets to the project.  
 
 >Drafts is me. Ive created some packages to use in my projects and game jams that are public in https://bitbucket.org/bydrafts/workspace/repositories/
-The more mature ones are Inventory, Dialogue, I18n nad DataView. I have rewrite a similar version of the Inventory and DataView for this interview.
+The more mature ones are Inventory, Dialogue, I18n and DataView. I have rewrite a similar version of the Inventory and DataView for this interview.
 
 Assembly Organization
 
@@ -76,3 +76,4 @@ Aside from StateMachine, they are mostly editor tools
     Scripts/Utility/StateMachine/*
     Scripts/Utility/Search/*
     Scripts/Utility/TypeCache/*
+    Packages/DraftsInternationalization
