@@ -15,5 +15,12 @@ MonoBehaviour:
   displayName: Diamond
   icon: {fileID: 21300000, guid: 5f8bebb42fd67f6498e254f8e54ad337, type: 3}
   description: Diamond description
-  price: 200
+  price: 80
   maxStack: 99
+  type: 
+  tags: []
+  scripts:
+    list: []
+  references:
+    version: 2
+    RefIds: []

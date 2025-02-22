@@ -53,6 +53,48 @@ MonoBehaviour:
     m_SerializedLabels:
     - ItemSO
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ebff69c8f16221f40b85bc5dc1efcc5b
+    m_Address: ItemSO/Pickaxe/Boots.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemSO
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f35bd0dc444db9942a86ebe600c33404
+    m_Address: ItemSO/Boots/Boots.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemSO
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 64c9d2515c5320540bb6f13d9cccb320
+    m_Address: ItemSO/Gold/Diamond.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemSO
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b666ffe5717570942963f0a5064bf681
+    m_Address: ItemSO/Green Berry/Green Berry.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemSO
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a418a3f9498d5b242ae57e1e973af9ae
+    m_Address: ItemSO/Iron/Iron.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemSO
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fb4d3ef7b1324d649baee406dc7e35f8
+    m_Address: ItemSO/Red Berry/Red Berry.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemSO
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: afac4934e1912364988afa1031d4f340
+    m_Address: ItemSO/Wood/Wood.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - ItemSO
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 4fdbde4d5e269a9499c3bf6d9e6ee9e6, type: 2}
   m_SchemaSet:

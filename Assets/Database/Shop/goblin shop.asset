@@ -36,6 +36,9 @@ MonoBehaviour:
   - item: {fileID: 11400000, guid: 9e52e3ed15a52d3468b49dce838cbbb4, type: 2}
     amount: 15
     favorite: 1
+  - item: {fileID: 11400000, guid: f35bd0dc444db9942a86ebe600c33404, type: 2}
+    amount: 1
+    favorite: 0
   references:
     version: 2
     RefIds:

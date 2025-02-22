@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d8c97219964cf59f2fe6169f2f24b5, type: 3}
   m_Name: Pickaxe
   m_EditorClassIdentifier: 
-  displayName: Boots
-  icon: {fileID: 21300000, guid: dd638b641203fb64bae7e7a288f61e3a, type: 3}
-  description: Boots description
-  price: 200
-  maxStack: 99
+  displayName: Pickaxe
+  icon: {fileID: 21300000, guid: fcdafb208c4e1f04b8e03eb76b2b7770, type: 3}
+  description: Mining Power +3
+  price: 100
+  maxStack: 1
   type: 
   tags: []
   scripts:
@@ -30,4 +30,4 @@ MonoBehaviour:
       data:
         slot: 0
         moveSpeedMultiplier: 0
-        mininPower: 0
+        mininPower: 3
