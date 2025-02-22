@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: afac4934e1912364988afa1031d4f340, type: 2}
     - target: {fileID: 1187430383741033251, guid: a9d556325bcc5bd41b2af932578aae8f, type: 3}
       propertyPath: animation
-      value: Mine
+      value: Cut
       objectReference: {fileID: 0}
     - target: {fileID: 3627087926800162516, guid: a9d556325bcc5bd41b2af932578aae8f, type: 3}
       propertyPath: m_Sprite
