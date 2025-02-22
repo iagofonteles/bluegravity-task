@@ -216,8 +216,30 @@
                 },
                 {
                     "name": "",
+                    "id": "e1115df6-8acf-4e24-aee6-0f5c5af1ca34",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hotbar1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "87f799a8-00a5-4cc7-9699-ed7d4fc36664",
                     "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hotbar2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5a0feeab-07a6-43d9-aa88-0ebb1fa1ac2d",
+                    "path": "<Keyboard>/x",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -238,6 +260,17 @@
                 },
                 {
                     "name": "",
+                    "id": "226995b9-5c39-49d9-aa91-51e8fe4d89c7",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hotbar3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "99013137-f82a-496c-b5b7-ebf61634969f",
                     "path": "<Keyboard>/4",
                     "interactions": "",
@@ -249,8 +282,30 @@
                 },
                 {
                     "name": "",
+                    "id": "42fcd7d5-76b3-455a-bb0b-2b06cb32e8a8",
+                    "path": "<Keyboard>/v",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hotbar4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "4c36118a-5fe9-49d9-ae2c-98603405e030",
                     "path": "<Keyboard>/5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hotbar5",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "79aa943c-664c-4a7b-99de-6436d1983686",
+                    "path": "<Keyboard>/b",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
