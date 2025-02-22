@@ -1,0 +1,43 @@
+
+Wood	Wood
+Wood desc	Wood material
+
+Green Berry	Green Berry
+Green Berry desc	Green Berry material
+
+Red Berry	Red Berry
+Red Berry desc	Red Berry material
+
+
+Iron	Iron
+Iron desc	Iron ore
+
+Gold	Gold
+Gold desc	Gold ore
+
+Diamond	Diamond
+Diamond desc	Diamond ore
+
+
+Pickaxe	Pickaxe
+Pickaxe desc	Mininig Power +3
+
+Shield	Shield
+Shield desc	Move Speed -20%
+
+Sword	Sword
+Sword desc	Mininig Power +1
+
+Boots	Boots
+Boots desc	Move Speed +100%
+
+
+Health Potion 1	Health Potion 1
+Health Potion 1 desc	Recover 10 health
+
+Mana Potion 1	Mana Potion 1
+Mana Potion 1 desc	recover 10 mana
+
+Potion Box	Potion Box
+Potion Box desc	Have a random potion
+

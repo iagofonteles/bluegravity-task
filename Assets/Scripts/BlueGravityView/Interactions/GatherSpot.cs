@@ -9,14 +9,15 @@ namespace BlueGravity.UI
         public AudioClip sfx;
         public Sprite icon;
 
-        [Header("fixed")] 
-        [SerializeField] private AudioSource audioSource;
-        [SerializeField] private SpriteRenderer iconRenderer;
+        [Header("fixed")] [SerializeField] private AudioSource audioSource;
+        [SerializeField] private SpriteRenderer interactIcon;
+        [SerializeField] private SpriteRenderer animationIcon;
         [SerializeField] private DynamicCharacterAction dynamiAction;
 
         private void Start()
         {
-            iconRenderer.sprite = icon;
+            interactIcon.sprite = icon;
+            animationIcon.sprite = item.Icon;
             audioSource.clip = sfx;
             dynamiAction.stateArgs.animation = animation;
         }
@@ -25,7 +26,6 @@ namespace BlueGravity.UI
         {
             var amount = character.Player.Stats.MiningPower.Value;
             character.Player.Inventory.Add(item, amount);
-            audioSource.Play();
         }
     }
 }

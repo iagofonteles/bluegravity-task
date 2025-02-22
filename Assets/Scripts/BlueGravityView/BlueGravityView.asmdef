@@ -9,7 +9,8 @@
         "InventoryView",
         "Interactable",
         "GameSave",
-        "StateMachine"
+        "StateMachine",
+        "DraftsI18N"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

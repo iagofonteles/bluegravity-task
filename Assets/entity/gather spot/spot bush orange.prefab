@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1366856820, guid: cf71580f0f348104ea4bbbee850c52f6, type: 3}
+    - target: {fileID: 4542759013195431669, guid: a9d556325bcc5bd41b2af932578aae8f, type: 3}
+      propertyPath: m_Volume
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 6879359830290637235, guid: a9d556325bcc5bd41b2af932578aae8f, type: 3}
       propertyPath: m_Name
       value: spot bush orange

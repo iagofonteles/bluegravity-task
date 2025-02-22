@@ -10,7 +10,8 @@
         "YamlDotNet",
         "Unity.Addressables",
         "Unity.ResourceManager",
-        "StateMachine"
+        "StateMachine",
+        "DraftsI18N"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -1,0 +1,43 @@
+
+Wood	Madeira
+Wood desc	Madeira
+
+Green Berry	Fruta Verde
+Green Berry desc	Uma frutinha verde
+
+Red Berry	Fruta Vermelha
+Red Berry desc	Uma frutinha vermelha
+
+
+Iron	Ferro
+Iron desc	Minerio de ferro
+
+Gold	Ouro
+Gold desc	Minerio de ouro
+
+Diamond	Diamante
+Diamond desc	Diamante
+
+
+Pickaxe	Picareta
+Pickaxe desc	Mineraçao +3
+
+Shield	Escudo
+Shield desc	Movimento -20%
+
+Sword	Espada
+Sword desc	Mineraçao +1
+
+Boots	Botas
+Boots desc	Movimento +100%
+
+
+Health Potion 1	Poçao de Vida
+Health Potion 1 desc	Recupera 10 de vida
+
+Mana Potion 1	Poçao de Mana
+Mana Potion 1 desc	Recupera 10 de mana
+
+Potion Box	Caixa de Poçoes
+Potion Box desc	Ganha uma poçao aleatoria
+

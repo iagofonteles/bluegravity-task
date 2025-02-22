@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: item
       value: 
       objectReference: {fileID: 11400000, guid: fb4d3ef7b1324d649baee406dc7e35f8, type: 2}
+    - target: {fileID: 4542759013195431669, guid: a9d556325bcc5bd41b2af932578aae8f, type: 3}
+      propertyPath: m_Volume
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 6879359830290637235, guid: a9d556325bcc5bd41b2af932578aae8f, type: 3}
       propertyPath: m_Name
       value: spot bush red
