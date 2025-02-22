@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progress: 0.048
-  duration: 2
+  duration: 1
   curve:
     serializedVersion: 2
     m_Curve:
@@ -261,9 +261,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comparer: 0
-  onTrigger:
-    m_PersistentCalls:
-      m_Calls: []
   onConditionMet:
     m_PersistentCalls:
       m_Calls:
@@ -279,9 +276,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onConditionNotMet:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &3079767190330585231
 GameObject:
   m_ObjectHideFlags: 0

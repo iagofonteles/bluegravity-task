@@ -1793,83 +1793,23 @@ MonoBehaviour:
     m_ActionId: b3c16c62-1d5c-4f31-9a10-2c025d7e1882
     m_ActionName: Menu/Pause[/Keyboard/escape]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4545148651083057561}
-        m_TargetAssemblyTypeName: Inventory.UI.ItemController, InventoryView
-        m_MethodName: UseItem
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1513600278304271901}
-          m_ObjectArgumentAssemblyTypeName: ViewUtility.DataView, DataView
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 01a0e9ec-4fe5-4cc2-accd-fb7de37d3504
     m_ActionName: Shortcuts/Hotbar1[/Keyboard/1]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4951290239855412110}
-        m_TargetAssemblyTypeName: Inventory.UI.ItemController, InventoryView
-        m_MethodName: UseItem
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1513600278304271901}
-          m_ObjectArgumentAssemblyTypeName: ViewUtility.DataView, DataView
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 23867fca-fa51-4b1d-a134-d1cbcc87f337
     m_ActionName: Shortcuts/Hotbar2[/Keyboard/2]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2971356713665262283}
-        m_TargetAssemblyTypeName: Inventory.UI.ItemController, InventoryView
-        m_MethodName: UseItem
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1513600278304271901}
-          m_ObjectArgumentAssemblyTypeName: ViewUtility.DataView, DataView
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: c2bcc7d1-78df-4338-b15d-3ba4fe618000
     m_ActionName: Shortcuts/Hotbar3[/Keyboard/3]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2028366620816037919}
-        m_TargetAssemblyTypeName: Inventory.UI.ItemController, InventoryView
-        m_MethodName: UseItem
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1513600278304271901}
-          m_ObjectArgumentAssemblyTypeName: ViewUtility.DataView, DataView
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: ffb0eb07-275f-41a1-b59f-3bc2e97e59ee
     m_ActionName: Shortcuts/Hotbar4[/Keyboard/4]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 23791731961561362}
-        m_TargetAssemblyTypeName: Inventory.UI.ItemController, InventoryView
-        m_MethodName: UseItem
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1513600278304271901}
-          m_ObjectArgumentAssemblyTypeName: ViewUtility.DataView, DataView
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 9dcedb9f-62d2-4e02-bf10-e1facbac2a97
     m_ActionName: Shortcuts/Hotbar5[/Keyboard/5]
   m_NeverAutoSwitchControlSchemes: 0
@@ -2770,7 +2710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3123,7 +3063,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8125552927414357120
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3267,10 +3207,10 @@ RectTransform:
   - {fileID: 1796866167864728111}
   m_Father: {fileID: 7324362656783157612}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 452, y: -323}
-  m_SizeDelta: {x: -1600, y: -781.5}
+  m_SizeDelta: {x: 390, y: 380}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1322596266240590508
 MonoBehaviour:
@@ -3347,7 +3287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3396,7 +3336,7 @@ RectTransform:
   m_Father: {fileID: 1700093490570556542}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3687,7 +3627,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6560,6 +6500,7 @@ GameObject:
   - component: {fileID: 4643410297231751864}
   - component: {fileID: 1513600278304271901}
   - component: {fileID: 7269421524201057602}
+  - component: {fileID: 7123085879581184963}
   m_Layer: 5
   m_Name: player ui
   m_TagString: Untagged
@@ -6580,6 +6521,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6615836243000953831}
+  - {fileID: 783746628150361970}
   - {fileID: 8110205442225856827}
   - {fileID: 2599462240319539669}
   - {fileID: 6571425726276025095}
@@ -6720,6 +6662,33 @@ MonoBehaviour:
   onDataChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7123085879581184963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5894080486302504194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4771c2730d742db8448d7337f542365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onLanguageChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1513600278304271901}
+        m_TargetAssemblyTypeName: ViewUtility.DataView, DataView
+        m_MethodName: RefreshData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5999227313362585307
 GameObject:
   m_ObjectHideFlags: 0
@@ -6957,6 +6926,134 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 0
+--- !u!1 &6089872884217455587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6893311626045105472}
+  - component: {fileID: 337291392005175414}
+  m_Layer: 5
+  m_Name: use sfx
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6893311626045105472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6089872884217455587}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7229318058693879831}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &337291392005175414
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6089872884217455587}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -1216957219763557600, guid: 2819cd052e0a7f94ca08d48b75ce651f, type: 2}
+  m_audioClip: {fileID: 8300000, guid: a511454f7fa47074cb59cf906736d21d, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.6
+  m_Pitch: 0.6
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &6503530307385127270
 GameObject:
   m_ObjectHideFlags: 0
@@ -8176,6 +8273,164 @@ MonoBehaviour:
   onMiddleClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &7220622249350327488
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 783746628150361970}
+  - component: {fileID: 2797896329209990933}
+  m_Layer: 0
+  m_Name: input shortcut
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &783746628150361970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7220622249350327488}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -960, y: -540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7324362656783157612}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2797896329209990933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7220622249350327488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 9f1efef8339b909428417dad1830582a, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 81f3b3d3-7f1d-433c-b8c9-21a9a73deca3
+    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6d6ba20c-a84e-4451-a912-5d193877b910
+    m_ActionName: Player/Interact[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 821529c8-874c-4bcc-8028-a49d57836917
+    m_ActionName: Menu/Bag[/Keyboard/tab,/Keyboard/i]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b3c16c62-1d5c-4f31-9a10-2c025d7e1882
+    m_ActionName: Menu/Pause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4545148651083057561}
+        m_TargetAssemblyTypeName: Inventory.UI.ItemController, InventoryView
+        m_MethodName: UseItem
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1513600278304271901}
+          m_ObjectArgumentAssemblyTypeName: ViewUtility.DataView, DataView
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 01a0e9ec-4fe5-4cc2-accd-fb7de37d3504
+    m_ActionName: Shortcuts/Hotbar1[/Keyboard/1]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4951290239855412110}
+        m_TargetAssemblyTypeName: Inventory.UI.ItemController, InventoryView
+        m_MethodName: UseItem
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1513600278304271901}
+          m_ObjectArgumentAssemblyTypeName: ViewUtility.DataView, DataView
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 23867fca-fa51-4b1d-a134-d1cbcc87f337
+    m_ActionName: Shortcuts/Hotbar2[/Keyboard/2]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2971356713665262283}
+        m_TargetAssemblyTypeName: Inventory.UI.ItemController, InventoryView
+        m_MethodName: UseItem
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1513600278304271901}
+          m_ObjectArgumentAssemblyTypeName: ViewUtility.DataView, DataView
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c2bcc7d1-78df-4338-b15d-3ba4fe618000
+    m_ActionName: Shortcuts/Hotbar3[/Keyboard/3]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2028366620816037919}
+        m_TargetAssemblyTypeName: Inventory.UI.ItemController, InventoryView
+        m_MethodName: UseItem
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1513600278304271901}
+          m_ObjectArgumentAssemblyTypeName: ViewUtility.DataView, DataView
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ffb0eb07-275f-41a1-b59f-3bc2e97e59ee
+    m_ActionName: Shortcuts/Hotbar4[/Keyboard/4]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 23791731961561362}
+        m_TargetAssemblyTypeName: Inventory.UI.ItemController, InventoryView
+        m_MethodName: UseItem
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1513600278304271901}
+          m_ObjectArgumentAssemblyTypeName: ViewUtility.DataView, DataView
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9dcedb9f-62d2-4e02-bf10-e1facbac2a97
+    m_ActionName: Shortcuts/Hotbar5[/Keyboard/5]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Shortcuts
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &7256162215554683479
 GameObject:
   m_ObjectHideFlags: 0
@@ -8764,6 +9019,7 @@ GameObject:
   - component: {fileID: 4582721381984513795}
   - component: {fileID: 2667865754718159841}
   - component: {fileID: 4265874721332628051}
+  - component: {fileID: 6776707813838361482}
   m_Layer: 5
   m_Name: slot template
   m_TagString: Untagged
@@ -8993,6 +9249,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   source: {fileID: 5186673700533974417}
   target: {fileID: 5012152693778639007}
+--- !u!114 &6776707813838361482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7710575982745679486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 704487928402413aaa403fa9bff10ca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onLeftClick:
+    m_PersistentCalls:
+      m_Calls: []
+  onRightClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7269421524201057602}
+        m_TargetAssemblyTypeName: BlueGravity.UI.PlayerController, BlueGravityView
+        m_MethodName: UseItem
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 5186673700533974417}
+          m_ObjectArgumentAssemblyTypeName: ViewUtility.DataView, DataView
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 337291392005175414}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onMiddleClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7837017087225175437
 GameObject:
   m_ObjectHideFlags: 0
@@ -9689,8 +9990,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 3052490390922319455}
-  minSize: {x: 100, y: 100}
-  snap: {x: 30, y: 0}
+  minSize: {x: 250, y: 100}
+  snap: {x: 70, y: 0}
 --- !u!1 &8571075214244676282
 GameObject:
   m_ObjectHideFlags: 0
@@ -10088,6 +10389,7 @@ Transform:
   - {fileID: 6523620313522194120}
   - {fileID: 2383207561962150555}
   - {fileID: 6689749301978339716}
+  - {fileID: 6893311626045105472}
   m_Father: {fileID: 7324362656783157612}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8679778973400932292

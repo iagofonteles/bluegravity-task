@@ -373,7 +373,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3765134663880801489
 RectTransform:
   m_ObjectHideFlags: 0
@@ -993,7 +993,7 @@ RectTransform:
   m_Father: {fileID: 4537383794477722030}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2530,6 +2530,7 @@ GameObject:
   - component: {fileID: 3942969963462297789}
   - component: {fileID: 5515061672190563054}
   - component: {fileID: 5828343380924837941}
+  - component: {fileID: 673476515477273831}
   m_Layer: 5
   m_Name: shop
   m_TagString: Untagged
@@ -2671,6 +2672,33 @@ MonoBehaviour:
       - m_Target: {fileID: 2457477597333181250}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &673476515477273831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3222122158322314007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4771c2730d742db8448d7337f542365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onLanguageChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5828343380924837941}
+        m_TargetAssemblyTypeName: ViewUtility.DataView, DataView
+        m_MethodName: RefreshData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3621,7 +3649,19 @@ MonoBehaviour:
         m_CallState: 2
   displayName:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4213023506761862865}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   icon:
     m_PersistentCalls:
       m_Calls:
@@ -6233,7 +6273,19 @@ MonoBehaviour:
         m_CallState: 2
   displayName:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1741200193638606644}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   icon:
     m_PersistentCalls:
       m_Calls:
