@@ -9,7 +9,8 @@
         "GameSave",
         "YamlDotNet",
         "Unity.Addressables",
-        "Unity.ResourceManager"
+        "Unity.ResourceManager",
+        "StateMachine"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

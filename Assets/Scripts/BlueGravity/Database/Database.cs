@@ -9,7 +9,7 @@ namespace BlueGravity
         Dictionary<Type, object> _fetched = new();
 
         public T Get<T>(string name) where T : UnityEngine.Object
-            => name == null ? null : GetAll<T>().GetValueOrDefault(name);
+            => string.IsNullOrEmpty(name) ? null : GetAll<T>().GetValueOrDefault(name);
 
         public IReadOnlyDictionary<string, T> GetAll<T>() where T : UnityEngine.Object
         {

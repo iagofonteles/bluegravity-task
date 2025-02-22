@@ -1,37 +1,47 @@
 using System;
 using System.Linq;
-using UnityEngine;
+using BlueGravity.Serialization;
+using Inventory;
 using Utility;
+using YamlDotNet.Serialization;
 
 namespace BlueGravity
 {
     [Serializable]
     public partial class Player : IGameSave
     {
-        [SerializeField] private string[] equipmentsSerialized = new string[3];
-        [SerializeField] private string[] hotbarSerialized = new string[10];
+        private static ISerializer _serializer = new SerializerBuilder()
+            .WithTypeConverter(new ItemSOConverter())
+            .WithTypeConverter(new ItemSOSlotConverter())
+            .Build();
 
-        /// <summary> Simplify data structures to serialize. </summary>
+        private static IDeserializer _deserializer = new DeserializerBuilder()
+            .WithTypeConverter(new ItemSOConverter())
+            .WithTypeConverter(new ItemSOSlotConverter())
+            .Build();
+
+        public Slot<ItemSO>[] _inventory { get; set; }
+        public ItemSO[] _hotbar { get; set; }
+
         void IGameSave.Save(string folder)
         {
-            equipmentsSerialized = _equipments.Select(i => i.Value.name).ToArray();
-            hotbarSerialized = _hotbar.Select(i => (i.Item as ItemSO)?.name).ToArray();
-            IYamlGameSave.SaveData(folder, this);
+            _inventory = Inventory.Slots.ToArray();
+            _hotbar = Hotbar.Select(s => s.Item as ItemSO).ToArray();
+            IYamlGameSave.SaveData(_serializer, folder, this);
         }
 
-        /// <summary> Rebuild simplified data structures. </summary>
-        object IGameSave.Load(string folder)
+        IGameSave IGameSave.Load(string folder)
         {
-            var player = IYamlGameSave.LoadData(folder, this) as Player;
+            var player = IYamlGameSave.LoadData(_deserializer, folder, this) as Player;
 
-            var index = 0;
-            foreach (var name in player.equipmentsSerialized)
-                player._equipments[index++].Value = Game.Database.Get<ItemSO>(name);
+            if(player._inventory != null)
+            player.Inventory.SetSlots(player._inventory);
 
-            index = 0;
-            foreach (var name in player.hotbarSerialized)
-                player._hotbar[index++].Item = Game.Database.Get<ItemSO>(name);
+            if(player._hotbar != null)
+            for (int i = 0; i < player.Hotbar.Length; i++)
+                player.Hotbar[i].Item = player._hotbar[i];
 
+            player.RecalculateStats(null);
             return player;
         }
     }

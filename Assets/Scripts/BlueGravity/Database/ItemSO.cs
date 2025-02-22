@@ -24,7 +24,6 @@ namespace BlueGravity
         public int MaxStack => maxStack;
         public string Type => type;
         public string[] Tags => tags;
-        public IReadOnlyList<IItemScript> Scripts => scripts;
 
         public T GetScript<T>() where T : IItemScript => scripts.OfType<T>().FirstOrDefault();
     }
