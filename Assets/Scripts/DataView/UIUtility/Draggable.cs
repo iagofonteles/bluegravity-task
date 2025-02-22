@@ -8,13 +8,14 @@ namespace UIUtility
     public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
         public delegate void DragChangedHandler(PointerEventData e);
-
+    
         public static event DragChangedHandler OnDragChanged;
 
         public GameObject target;
         public bool returnToOrigin = true;
-        public UnityEvent onDragBegin;
-        public UnityEvent onDragEnd;
+        public UnityEvent<PointerEventData> onDragBegin;
+        public UnityEvent<PointerEventData> onDragEnd;
+        public UnityEvent<PointerEventData> onDrop;
 
         private Vector2 _origin;
 
@@ -29,10 +30,15 @@ namespace UIUtility
                 canvas.overrideSorting = true;
 
             OnDragChanged?.Invoke(eventData);
-            onDragBegin.Invoke();
+            onDragBegin.Invoke(eventData);
         }
 
-        void IEndDragHandler.OnEndDrag(PointerEventData eventData)
+        void IDragHandler.OnDrag(PointerEventData eventData)
+        {
+            target.transform.position += (Vector3)eventData.delta;
+        }
+
+        public void OnEndDrag(PointerEventData eventData)
         {
             if (returnToOrigin) target.transform.position = _origin;
 
@@ -43,12 +49,15 @@ namespace UIUtility
                 canvas.overrideSorting = false;
 
             OnDragChanged?.Invoke(eventData);
-            onDragEnd.Invoke();
+            onDragEnd.Invoke(eventData);
         }
 
-        void IDragHandler.OnDrag(PointerEventData eventData)
+        public void OnDrop(PointerEventData eventData)
         {
-            target.transform.position += (Vector3)eventData.delta;
+            if (returnToOrigin) target.transform.position = _origin;
+            OnDragChanged?.Invoke(eventData);
+            onDrop.Invoke(eventData);
         }
+
     }
 }

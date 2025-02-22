@@ -25,7 +25,15 @@ namespace UIUtility
 
         void IDropHandler.OnDrop(PointerEventData e)
         {
-            if (!filter.Accepts(e.pointerDrag)) return;
+            var draggable = e.pointerDrag.GetComponent<Draggable>();
+
+            if (!filter.Accepts(e.pointerDrag))
+            {
+                draggable.OnEndDrag(e);
+                return;
+            }
+
+            draggable.OnDrop(e);
             onItemDropped.Invoke(e);
         }
     }
