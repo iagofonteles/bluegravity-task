@@ -9,6 +9,8 @@ namespace ViewUtility
     {
         public abstract object GetData();
         public abstract void SetData(object data);
+        public void CopyData(DataView view) => SetData(view.GetData());
+        public void ResetData() => SetData(null);
 
         [FormerlySerializedAs("OnDataChanged")]
         public UnityEvent<object> onDataChanged;

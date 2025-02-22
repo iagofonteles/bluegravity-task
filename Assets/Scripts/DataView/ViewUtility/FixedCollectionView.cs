@@ -9,9 +9,9 @@ namespace ViewUtility
 
         protected override void Subscribe(IEnumerable data)
         {
-            var index = 0;
+            var i = 0;
             foreach (var item in data)
-                itemViews[index].SetData(item);
+                itemViews[i++].SetData(item);
         }
 
         protected override void Unsubscribe(IEnumerable data)
