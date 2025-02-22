@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Utility;
 
 namespace Inventory
@@ -61,7 +62,10 @@ namespace Inventory
 
             if (availableItems > 0)
                 seller.Inventory.Remove(item, amount);
-            buyer.Inventory.Add(item, amount);
+
+            // dont change infinite inventory
+            if (buyer.Inventory.Count(item) >= 0)
+                buyer.Inventory.Add(item, amount);
 
             return true;
         }
