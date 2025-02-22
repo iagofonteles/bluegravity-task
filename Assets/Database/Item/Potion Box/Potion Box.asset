@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d8c97219964cf59f2fe6169f2f24b5, type: 3}
   m_Name: Potion Box
   m_EditorClassIdentifier: 
-  displayName: Potion Box
-  icon: {fileID: 21300000, guid: 886680fdcb0ad01469a8c55498aa3dcc, type: 3}
-  description: May contain a variety of potions
   price: 0
   maxStack: 99
+  type: 
+  tags: []
   scripts:
     list:
     - rid: 5184424273557061636
+  icon: {fileID: 21300000, guid: 886680fdcb0ad01469a8c55498aa3dcc, type: 3}
   references:
     version: 2
     RefIds:
@@ -29,4 +29,3 @@ MonoBehaviour:
         contents:
         - {fileID: 11400000, guid: 594dd192011725c459c9a2fe8b32e7e0, type: 2}
         - {fileID: 11400000, guid: 6d989b032e181604597026a29d5b8cb6, type: 2}
-        - {fileID: 11400000}
