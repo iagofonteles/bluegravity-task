@@ -6,7 +6,10 @@
         "Inventory",
         "Unity.InputSystem",
         "Interactable",
-        "GameSave"
+        "GameSave",
+        "YamlDotNet",
+        "Unity.Addressables",
+        "Unity.ResourceManager"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

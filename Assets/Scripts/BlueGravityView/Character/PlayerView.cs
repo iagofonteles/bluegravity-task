@@ -11,6 +11,7 @@ namespace BlueGravity.UI
         public DataView moneyView;
         public DataView statsView;
         public DataView hotbarView;
+        public DataView equipmentsView;
 
         public UnityEvent<string> displayName;
         public UnityEvent<Vector3> position;
@@ -21,6 +22,7 @@ namespace BlueGravity.UI
             moneyView.TrySetData(data.Money);
             statsView.TrySetData(data.Stats);
             hotbarView.TrySetData(data.Hotbar);
+            equipmentsView.TrySetData(data.Equipments);
 
             displayName.Invoke(data.DisplayName);
             position.Invoke(data.Position);
@@ -32,6 +34,7 @@ namespace BlueGravity.UI
             moneyView.TrySetData(null);
             statsView.TrySetData(null);
             hotbarView.TrySetData(null);
+            equipmentsView.TrySetData(null);
 
             displayName.Invoke(null);
         }

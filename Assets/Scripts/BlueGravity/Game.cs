@@ -5,6 +5,7 @@ namespace BlueGravity
 {
     public static class Game
     {
+        public static Database Database = new();
         public static GameSave Save;
 
         static Game()
