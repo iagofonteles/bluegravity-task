@@ -26,7 +26,7 @@ namespace Utility
             if (!_saves.TryGetValue(type, out var save))
             {
                 save = (IGameSave)Activator.CreateInstance(type);
-                save.Load(Path.Combine(RootFolder, SaveName));
+                save = save.Load(Path.Combine(RootFolder, SaveName));
                 _saves[type] = save;
             }
 
@@ -43,7 +43,7 @@ namespace Utility
         {
             OnSaving?.Invoke(this);
             var path = Path.Combine(RootFolder, SaveName);
-            
+
             if (!Directory.Exists(path))
                 Directory.CreateDirectory(path);
 
