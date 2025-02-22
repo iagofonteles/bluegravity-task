@@ -12,9 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d8c97219964cf59f2fe6169f2f24b5, type: 3}
   m_Name: Boots
   m_EditorClassIdentifier: 
-  displayName: Boots
-  icon: {fileID: 21300000, guid: dd638b641203fb64bae7e7a288f61e3a, type: 3}
-  description: Move speed +200%
   price: 80
   maxStack: 1
   type: 
@@ -22,6 +19,7 @@ MonoBehaviour:
   scripts:
     list:
     - rid: 5184424316541076032
+  icon: {fileID: 21300000, guid: dd638b641203fb64bae7e7a288f61e3a, type: 3}
   references:
     version: 2
     RefIds:
@@ -29,5 +27,5 @@ MonoBehaviour:
       type: {class: Equipment, ns: BlueGravity.ItemScripts, asm: BlueGravity}
       data:
         slot: 2
-        moveSpeedMultiplier: 2
+        moveSpeedMultiplier: 1
         mininPower: 0
