@@ -7,16 +7,14 @@ namespace Utility.Triggers
     {
         public float comparer;
         public UnityEvent<bool> onConditionMet;
-        public UnityEvent<bool> onConditionNotMet;
 
         public void Trigger(bool conditionMet)
         {
             onConditionMet.Invoke(conditionMet);
-            onConditionNotMet.Invoke(!conditionMet);
         }
 
         public void IsNull(object value) => Trigger(value == null);
-        public void IsNotNull(object value) => Trigger(value == null);
+        public void IsNotNull(object value) => Trigger(value != null);
 
         public void IsNullOrEmpty(string value) => Trigger(string.IsNullOrEmpty(value));
 
