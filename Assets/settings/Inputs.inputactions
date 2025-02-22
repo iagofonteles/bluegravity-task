@@ -151,6 +151,114 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Shortcuts",
+            "id": "6c110d9c-d472-4950-a5e6-e981b1dde079",
+            "actions": [
+                {
+                    "name": "Hotbar1",
+                    "type": "Button",
+                    "id": "01a0e9ec-4fe5-4cc2-accd-fb7de37d3504",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Hotbar2",
+                    "type": "Button",
+                    "id": "23867fca-fa51-4b1d-a134-d1cbcc87f337",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Hotbar3",
+                    "type": "Button",
+                    "id": "c2bcc7d1-78df-4338-b15d-3ba4fe618000",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Hotbar4",
+                    "type": "Button",
+                    "id": "ffb0eb07-275f-41a1-b59f-3bc2e97e59ee",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Hotbar5",
+                    "type": "Button",
+                    "id": "9dcedb9f-62d2-4e02-bf10-e1facbac2a97",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "254b8c3e-f9a0-49b3-b094-89fb1b2f4e08",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hotbar1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "87f799a8-00a5-4cc7-9699-ed7d4fc36664",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hotbar2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "81982185-0108-4d27-82cb-8d602be4fb57",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hotbar3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "99013137-f82a-496c-b5b7-ebf61634969f",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hotbar4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4c36118a-5fe9-49d9-ae2c-98603405e030",
+                    "path": "<Keyboard>/5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hotbar5",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
