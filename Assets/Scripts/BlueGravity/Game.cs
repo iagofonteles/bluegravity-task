@@ -12,7 +12,7 @@ namespace BlueGravity
 
         static Game()
         {
-            var dataPath = Application.isEditor ? Application.dataPath + "/.." : Application.persistentDataPath;
+            var dataPath = Application.dataPath + "/..";
             var saveFolder = dataPath + "/Saves";
             Debug.Log($"saveFolder: {saveFolder}");
 
@@ -21,7 +21,7 @@ namespace BlueGravity
 
             var tableProvider = new AddressablesTableProvider("i18n/{1} {0}.txt");
             var fileReader = new TSVFileReader();
-            I18n = new I18n("eng", tableProvider, fileReader);
+            I18n = new I18n("en", tableProvider, fileReader);
         }
     }
 }

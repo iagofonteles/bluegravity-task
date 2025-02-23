@@ -18,12 +18,22 @@ MonoBehaviour:
   m_GUID: 9ef9063c5956290458b55655c05118c3
   m_SerializeEntries:
   - m_GUID: 980db73227024f45a745338b67443ad4
-    m_Address: i18n/itemso eng.txt
+    m_Address: i18n/itemso en.txt
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5f579074e9106ab4d94d4f1d60010be0
     m_Address: i18n/itemso br.txt
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a0dc8e75c874d8545b87375c0751fbcb
+    m_Address: i18n/menu br.txt
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6087f8255afc7054483462bdb1f02116
+    m_Address: i18n/menu en.txt
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

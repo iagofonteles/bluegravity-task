@@ -1,0 +1,3 @@
+Inventory	Inventory
+Buy	Buy
+Sell	Sell

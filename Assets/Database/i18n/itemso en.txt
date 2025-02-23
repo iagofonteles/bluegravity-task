@@ -32,10 +32,10 @@ Boots	Boots
 Boots desc	Move Speed +100%
 
 
-Health Potion 1	Health Potion 1
+Health Potion 1	Health Potion
 Health Potion 1 desc	Recover 10 health
 
-Mana Potion 1	Mana Potion 1
+Mana Potion 1	Mana Potion
 Mana Potion 1 desc	recover 10 mana
 
 Potion Box	Potion Box
