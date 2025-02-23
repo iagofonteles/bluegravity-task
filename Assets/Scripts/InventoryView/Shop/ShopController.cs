@@ -1,16 +1,19 @@
 using System;
 using UnityEngine.Events;
+using Utility;
 using ViewUtility;
+
 // ReSharper disable UnusedMember.Global
 
 namespace Inventory.UI
 {
     public class ShopController : DataView<IShop>
     {
-        private static int _amount = 1;
-        
+        private static Observable<int> _amount = new(1);
+
         public DataView merchantView;
         public DataView costumerView;
+        public DataView amountView;
         public UnityEvent<DataView> onTransactionSuceed;
         public UnityEvent<DataView> onTransactionFailed;
 
@@ -20,23 +23,28 @@ namespace Inventory.UI
         {
             merchantView.TrySetData(data);
             costumerView.TrySetData(Costumer);
+            amountView.TrySetData(_amount);
         }
 
         protected override void Unsubscribe(IShop data)
         {
             merchantView.TrySetData(null);
             costumerView.TrySetData(null);
+            amountView.TrySetData(null);
         }
 
-        public void IncreaseAmount() => _amount = Math.Min(_amount + 1, 10);
-        public void DecreaseAmount() => _amount = Math.Max(_amount - 1, 1);
+
+        public void IncreaseAmount() => _amount.Value = Math.Min(_amount.Value + 1, 9);
+        public void DecreaseAmount() => _amount.Value = Math.Max(_amount.Value - 1, 1);
 
         public void Buy(DataView view)
         {
             if (Costumer == null) throw new Exception("no Costumer set");
 
             var item = view.GetData();
-            var result = Data.Buy(Costumer, item, _amount);
+            var count = Data.Inventory.Count(item);
+            var amount = count < 0 ? _amount.Value : Math.Min(count, _amount.Value);
+            var result = Data.Buy(Costumer, item, amount);
 
             if (result) onTransactionSuceed.Invoke(view);
             else onTransactionFailed.Invoke(view);
@@ -47,7 +55,9 @@ namespace Inventory.UI
             if (Costumer == null) throw new Exception("no Costumer set");
 
             var item = view.GetData();
-            var result = Data.Sell(Costumer, item, _amount);
+            var count = Costumer.Inventory.Count(item);
+            var amount = count < 0 ? _amount.Value : Math.Min(count, _amount.Value);
+            var result = Data.Sell(Costumer, item, amount);
 
             if (result) onTransactionSuceed.Invoke(view);
             else onTransactionFailed.Invoke(view);

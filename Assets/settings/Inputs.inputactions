@@ -20,7 +20,7 @@
                     "id": "6d6ba20c-a84e-4451-a912-5d193877b910",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 }
             ],
@@ -103,7 +103,7 @@
                     "id": "821529c8-874c-4bcc-8028-a49d57836917",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 },
                 {
@@ -112,7 +112,7 @@
                     "id": "b3c16c62-1d5c-4f31-9a10-2c025d7e1882",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 }
             ],
@@ -121,17 +121,6 @@
                     "name": "",
                     "id": "008bdce4-4445-4513-ba29-1cb714af01b7",
                     "path": "<Keyboard>/tab",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Bag",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f8eef0af-fabe-4b08-ab65-6c20ba6dff61",
-                    "path": "<Keyboard>/i",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -162,7 +151,7 @@
                     "id": "01a0e9ec-4fe5-4cc2-accd-fb7de37d3504",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 },
                 {
@@ -171,7 +160,7 @@
                     "id": "23867fca-fa51-4b1d-a134-d1cbcc87f337",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 },
                 {
@@ -180,7 +169,7 @@
                     "id": "c2bcc7d1-78df-4338-b15d-3ba4fe618000",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 },
                 {
@@ -189,7 +178,7 @@
                     "id": "ffb0eb07-275f-41a1-b59f-3bc2e97e59ee",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 },
                 {
@@ -198,7 +187,7 @@
                     "id": "9dcedb9f-62d2-4e02-bf10-e1facbac2a97",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 }
             ],

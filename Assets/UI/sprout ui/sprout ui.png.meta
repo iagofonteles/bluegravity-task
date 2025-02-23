@@ -264,6 +264,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: arrow r
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 258
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e073cfb48d560941b5176fde3abaa0c
+      internalID: 639815881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow l
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 242
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c8c273b34238c54a9cd59d803c46be3
+      internalID: -1073863734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -284,6 +326,8 @@ TextureImporter:
       Sprite sheet for Basic Pack_6: 813897722
       Sprite sheet for Basic Pack_7: 788067356
       Sprite sheet for Basic Pack_8: 1852759195
+      arrow l: -1073863734
+      arrow r: 639815881
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
