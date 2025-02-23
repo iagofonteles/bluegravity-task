@@ -33,7 +33,7 @@ namespace BlueGravity
         public void RecalculateStats(object _)
         {
             var equips = Equipments.Select(i => i.Value?.GetScript<Equipment>()).ToArray();
-            Stats.MiningPower.Value = 1 + equips.Sum(i => i?.MininPower ?? 0);
+            Stats.MiningPower.Value = equips.Sum(i => i?.MininPower ?? 0);
             Stats.MoveSpeed.Value = 1 + equips.Sum(i => i?.MoveSpeedMultiplier ?? 0);
         }
     }

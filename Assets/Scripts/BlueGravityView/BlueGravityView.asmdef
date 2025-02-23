@@ -10,7 +10,8 @@
         "Interactable",
         "GameSave",
         "StateMachine",
-        "DraftsI18N"
+        "DraftsI18N",
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
