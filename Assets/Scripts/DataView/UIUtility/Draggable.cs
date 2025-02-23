@@ -23,12 +23,7 @@ namespace UIUtility
         {
             _origin = target.transform.position;
 
-            // put image in front
-            foreach (var grapchic in target.GetComponentsInChildren<MaskableGraphic>())
-                grapchic.maskable = false;
-            foreach (var canvas in target.GetComponentsInChildren<Canvas>())
-                canvas.overrideSorting = true;
-
+            ChangeTargetSorting(true);
             OnDragChanged?.Invoke(eventData);
             onDragBegin.Invoke(eventData);
         }
@@ -42,12 +37,7 @@ namespace UIUtility
         {
             if (returnToOrigin) target.transform.position = _origin;
 
-            // put image back
-            foreach (var grapchic in target.GetComponentsInChildren<MaskableGraphic>())
-                grapchic.maskable = true;
-            foreach (var canvas in target.GetComponentsInChildren<Canvas>())
-                canvas.overrideSorting = false;
-
+            ChangeTargetSorting(false);
             OnDragChanged?.Invoke(eventData);
             onDragEnd.Invoke(eventData);
         }
@@ -55,9 +45,18 @@ namespace UIUtility
         public void OnDrop(PointerEventData eventData)
         {
             if (returnToOrigin) target.transform.position = _origin;
+         
+            ChangeTargetSorting(false);
             OnDragChanged?.Invoke(eventData);
             onDrop.Invoke(eventData);
         }
 
+        void ChangeTargetSorting(bool onTop)
+        {
+            foreach (var grapchic in target.GetComponentsInChildren<MaskableGraphic>())
+                grapchic.maskable = !onTop;
+            foreach (var canvas in target.GetComponentsInChildren<Canvas>())
+                canvas.overrideSorting = onTop;
+        }
     }
 }
