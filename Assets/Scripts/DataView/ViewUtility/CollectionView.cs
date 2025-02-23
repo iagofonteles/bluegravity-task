@@ -19,18 +19,22 @@ namespace ViewUtility
 
         protected override void Subscribe(IEnumerable data)
         {
-            var index = 0;
-            foreach (object item in data)
-                AddItem(index++, item);
-
             if (data is INotifyCollectionChanged notifyCollection)
                 notifyCollection.CollectionChanged += CollectionChanged;
+
+            var index = 0;
+            foreach (var item in data)
+                AddItem(index++, item);
         }
 
         protected override void Unsubscribe(IEnumerable data)
         {
             if (data is INotifyCollectionChanged notifyCollection)
                 notifyCollection.CollectionChanged -= CollectionChanged;
+
+            foreach (var view in _views)
+                Destroy(view.gameObject);
+            _views.Clear();
         }
 
         private void AddItem(int index, object item)
