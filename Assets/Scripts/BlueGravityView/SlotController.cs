@@ -1,6 +1,8 @@
 using System;
 using BlueGravity;
+using BlueGravity.UI;
 using UnityEngine.EventSystems;
+using Utility;
 using ViewUtility;
 
 namespace Inventory.UI
@@ -22,8 +24,16 @@ namespace Inventory.UI
 
         public void SwapSlotContent(PointerEventData e)
         {
+            if (Data == null) return;
             var otherData = e.pointerDrag.GetComponent<DataView>()?.GetData();
-            if (Data == null || otherData is not ISlot other)
+
+            if (otherData is Observable<ItemSO> equipSlot)
+            {
+                Unnequip(equipSlot);
+                return;
+            }
+
+            if (otherData is not ISlot other)
                 throw new Exception("Invalid Data");
 
             var item = Data.Item;
@@ -35,6 +45,17 @@ namespace Inventory.UI
             other.Item = item;
             other.Amount = amount;
             other.Favorite = favorite;
+        }
+
+        private void Unnequip(Observable<ItemSO> equipSlot)
+        {
+            if (equipSlot.Value == null) return;
+
+            var inventory = GetComponentInParent<PlayerView>()?.Data.Inventory;
+            if (inventory == null || !inventory.Fits(equipSlot.Value, 1)) return;
+
+            inventory.Add(equipSlot.Value, 1);
+            equipSlot.Value = null;
         }
     }
 }
