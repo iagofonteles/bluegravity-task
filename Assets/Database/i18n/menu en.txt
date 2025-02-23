@@ -1,3 +1,4 @@
 Inventory	Inventory
 Buy	Buy
 Sell	Sell
+Space	Space

@@ -1,3 +1,4 @@
 Inventory	Inventario
 Buy	Compra
 Sell	Venda
+Space	Espaço

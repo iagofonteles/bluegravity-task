@@ -628,18 +628,6 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 2201079550196775211}
           m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: set_playbackTime
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Get
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 2201079550196775211}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
           m_MethodName: Play
           m_Mode: 5
           m_Arguments:

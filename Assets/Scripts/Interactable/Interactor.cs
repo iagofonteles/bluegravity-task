@@ -13,7 +13,12 @@ namespace Interactable
         public float Range => range;
         public Observable<IInteractable> NearestInteracble { get; } = new();
 
-        private void Awake() => NearestInteracble.OnValueChanged += (n, _) => OnNearestChanged.Invoke(n);
+        private void Awake()
+        {
+            NearestInteracble.OnValueChanged += (n, _) => OnNearestChanged.Invoke(n);
+            OnNearestChanged.Invoke(NearestInteracble.Value);
+        }
+
         private void Update() => ((IInteractor)this).UpdateInteractable();
         private void OnDisable() => NearestInteracble.Value = null;
 
