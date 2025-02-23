@@ -1116,6 +1116,7 @@ GameObject:
   - component: {fileID: 1410591689463878691}
   - component: {fileID: 2971356713665262283}
   - component: {fileID: 7437576713502887222}
+  - component: {fileID: 3517425760273704992}
   m_Layer: 5
   m_Name: slot template (2)
   m_TagString: Untagged
@@ -1458,6 +1459,20 @@ MonoBehaviour:
   onMiddleClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3517425760273704992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337081093234332844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa226e5a53f406598a6c6e96a7437eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 2519924136921528894}
+  target: {fileID: 5012152693778639007}
 --- !u!1 &1351911747064573906
 GameObject:
   m_ObjectHideFlags: 0
@@ -2427,6 +2442,7 @@ GameObject:
   - component: {fileID: 1499027617600406440}
   - component: {fileID: 4951290239855412110}
   - component: {fileID: 3714265194313663309}
+  - component: {fileID: 7075217372383603131}
   m_Layer: 5
   m_Name: slot template (1)
   m_TagString: Untagged
@@ -2769,6 +2785,20 @@ MonoBehaviour:
   onMiddleClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7075217372383603131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028955688787249172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa226e5a53f406598a6c6e96a7437eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 7731818772839421159}
+  target: {fileID: 5012152693778639007}
 --- !u!1 &2034637134976695744
 GameObject:
   m_ObjectHideFlags: 0
@@ -2998,6 +3028,7 @@ GameObject:
   - component: {fileID: 5648590426506982112}
   - component: {fileID: 2576241686231010328}
   - component: {fileID: 8785120030172988839}
+  - component: {fileID: 4943957680393660001}
   m_Layer: 5
   m_Name: slot misc
   m_TagString: Untagged
@@ -3150,6 +3181,20 @@ MonoBehaviour:
   onMiddleClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4943957680393660001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2200663920734221475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa226e5a53f406598a6c6e96a7437eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 6133462926007517282}
+  target: {fileID: 5012152693778639007}
 --- !u!1 &2222632698286149367
 GameObject:
   m_ObjectHideFlags: 0
@@ -3271,7 +3316,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 4554684450937119868}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.04290429
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -5829,6 +5874,7 @@ GameObject:
   - component: {fileID: 2895894721230574900}
   - component: {fileID: 23791731961561362}
   - component: {fileID: 8178129624761620916}
+  - component: {fileID: 2199701197811510861}
   m_Layer: 5
   m_Name: slot template (4)
   m_TagString: Untagged
@@ -6171,6 +6217,20 @@ MonoBehaviour:
   onMiddleClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2199701197811510861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5526404208701915530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa226e5a53f406598a6c6e96a7437eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 5270234154821328211}
+  target: {fileID: 5012152693778639007}
 --- !u!1 &5783967211398732325
 GameObject:
   m_ObjectHideFlags: 0
@@ -7110,6 +7170,7 @@ GameObject:
   - component: {fileID: 4821533620841103804}
   - component: {fileID: 2738565849270956171}
   - component: {fileID: 3216853966045128164}
+  - component: {fileID: 1004226110240381317}
   m_Layer: 5
   m_Name: slot armor
   m_TagString: Untagged
@@ -7262,6 +7323,20 @@ MonoBehaviour:
   onMiddleClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1004226110240381317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6848169001653793027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa226e5a53f406598a6c6e96a7437eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 2041344796851201856}
+  target: {fileID: 5012152693778639007}
 --- !u!1 &6879970371583138660
 GameObject:
   m_ObjectHideFlags: 0
@@ -7622,6 +7697,7 @@ GameObject:
   - component: {fileID: 7240957293657440669}
   - component: {fileID: 4545148651083057561}
   - component: {fileID: 5325874429524145656}
+  - component: {fileID: 1755485977624549027}
   m_Layer: 5
   m_Name: slot template
   m_TagString: Untagged
@@ -7964,6 +8040,20 @@ MonoBehaviour:
   onMiddleClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1755485977624549027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7166919616619934787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa226e5a53f406598a6c6e96a7437eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 8382273457819234541}
+  target: {fileID: 5012152693778639007}
 --- !u!1 &7220622249350327488
 GameObject:
   m_ObjectHideFlags: 0
@@ -8229,6 +8319,7 @@ GameObject:
   - component: {fileID: 6540730507735551349}
   - component: {fileID: 2028366620816037919}
   - component: {fileID: 49381077964711719}
+  - component: {fileID: 2844671342587264486}
   m_Layer: 5
   m_Name: slot template (3)
   m_TagString: Untagged
@@ -8571,6 +8662,20 @@ MonoBehaviour:
   onMiddleClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2844671342587264486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7400522159013993554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa226e5a53f406598a6c6e96a7437eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 5470479174888771844}
+  target: {fileID: 5012152693778639007}
 --- !u!1 &7464590665560512606
 GameObject:
   m_ObjectHideFlags: 0
@@ -9231,6 +9336,7 @@ GameObject:
   - component: {fileID: 7674941042622899230}
   - component: {fileID: 2362108352713770060}
   - component: {fileID: 6238942893360939038}
+  - component: {fileID: 1223121210898677938}
   m_Layer: 5
   m_Name: slot weapon
   m_TagString: Untagged
@@ -9423,6 +9529,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1223121210898677938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7837017087225175437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa226e5a53f406598a6c6e96a7437eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 7517364706677967890}
+  target: {fileID: 5012152693778639007}
 --- !u!1 &7959001837046890447
 GameObject:
   m_ObjectHideFlags: 0
